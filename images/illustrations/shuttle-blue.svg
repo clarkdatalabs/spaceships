@@ -13,13 +13,13 @@
    id="Layer_1"
    xml:space="preserve"
    overflow="visible"
-   viewBox="0 0 307.6216 446.86808"
+   viewBox="0 0 307.6216 534.03803"
    version="1.1"
    enable-background="new 0 0 311.226 677.024"
    inkscape:version="0.91 r13725"
    sodipodi:docname="shuttle-blue.svg"
    width="307.62161"
-   height="446.86807"
+   height="534.03802"
    style="overflow:visible"><defs
      id="defs553"><clipPath
        id="XMLID_199_-5"><use
@@ -45,9 +45,9 @@
      fit-margin-left="1"
      fit-margin-right="1"
      fit-margin-bottom="1"
-     inkscape:zoom="1.01"
-     inkscape:cx="141.43541"
-     inkscape:cy="234.5434"
+     inkscape:zoom="2.03"
+     inkscape:cx="-44.527132"
+     inkscape:cy="106.9895"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -68,7 +68,7 @@
            d="m 187.88,289.65 c 0,0 12.229,99.575 44.513,149.52 32.286,49.947 66.371,56.477 72.719,100.22 1.361,9.361 2.042,19.049 2.042,19.049 l -117.23,28.029 -8.332,-292.74 6.29,-4.08 z"
            id="path180"
            inkscape:connector-curvature="0"
-           style="fill:#cbd0ff;stroke:#010101;stroke-width:2.40109992;stroke-miterlimit:3.86400008;fill-opacity:1" /></g></g><g
+           style="fill:#cbd0ff;fill-opacity:1;stroke:#010101;stroke-width:2.40109992;stroke-miterlimit:3.86400008" /></g></g><g
        id="g122"><g
          id="g124"><g
            id="g126"><defs
@@ -169,7 +169,7 @@
            d="m 123.34,289.65 c 0,0 -12.225,99.575 -44.511,149.52 -32.286,49.947 -66.368,56.477 -72.72,100.22 -1.361,9.361 -2.039,19.049 -2.039,19.049 l 117.23,28.029 8.33,-292.74 -6.29,-4.08 z"
            id="path369"
            inkscape:connector-curvature="0"
-           style="fill:#cbd0ff;stroke:#010101;stroke-width:2.40109992;stroke-miterlimit:3.86400008;fill-opacity:1" /></g></g><g
+           style="fill:#cbd0ff;fill-opacity:1;stroke:#010101;stroke-width:2.40109992;stroke-miterlimit:3.86400008" /></g></g><g
        id="g311"><g
          id="g313"><g
            id="g315"><defs
@@ -331,7 +331,7 @@
                clip-path="url(#XMLID_197_)"
                id="g463"><g
                  id="g465"><polygon
-                   points="157.67,644.74 157.67,508.31 167.36,508.31 167.36,645.42 "
+                   points="167.36,645.42 157.67,644.74 157.67,508.31 167.36,508.31 "
                    id="polygon467"
                    style="fill:#d2d3d4" /></g></g></g></g></g><g
          id="g469"><g
@@ -352,7 +352,7 @@
                id="g481"><g
                  id="g483"><polygon
                    stroke-miterlimit="3.864"
-                   points="157.67,644.74 157.67,508.31 167.36,508.31 167.36,645.42 "
+                   points="167.36,645.42 157.67,644.74 157.67,508.31 167.36,508.31 "
                    id="polygon485"
                    style="fill:none;stroke:#010101;stroke-width:1.20050001;stroke-miterlimit:3.86400008" /></g></g></g></g></g></g><g
        transform="translate(39.885295,0)"
