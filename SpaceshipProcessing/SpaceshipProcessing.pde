@@ -6,6 +6,7 @@ int dayCount;
 void setup(){
   size(1440, 800);
   smooth();
+  //Set frameRate to 60 frames per second
   frameRate(60);
   //Set monthCount at 0
   dayCount = 0;
@@ -17,8 +18,7 @@ void setup(){
 void draw(){
   // draw background image
   background(backgroundImg);
-  //import csv file into processing
-  //import();
+  // every frame (at 60 fps) a day passes, 
   dayCount = dayCount + 1;
   println("A month has passed! This is day", dayCount);
   println("And the framerate is", frameRate);
