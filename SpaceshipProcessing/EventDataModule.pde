@@ -24,20 +24,21 @@ public class Mission {
   // for simplicity when startDay and endDay are initialized, should be converted to
   // ints where 4/12/81 == day 
   private String startDayString;
-  private String endDayString;
   private int distanceTraveled;
+  private int flightTime;
   private boolean doesItCrash;
   private int startDayInt;
-  private int endDayInt;
-  private int dayInterval;
+  private String launchHeadlineText;
+  private String launchHeadlineImportance;
+  private String crashHeadline;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, String endDayString_, int distanceTraveled_, boolean doesItCrash_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, boolean doesItCrash_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
-    endDayString = endDayString_;
     distanceTraveled = distanceTraveled_;
+    flightTime = flightTime_;
     doesItCrash = doesItCrash_;
     
     // takes month/day/year formatted date (e.g. 07/14/1989) and calculates # of days since
@@ -46,20 +47,12 @@ public class Mission {
     String month = dateParts[0];
     String day = dateParts[1];
     String year = dateParts[2];
-    startDayInt = dateFromShuttleProgramStart(Integer.valueOf(year), Integer.valueOf(month), Integer.valueOf(day));
-    
-    String [] datePartsEnd = endDayString.split("/");
-    String monthEnd = datePartsEnd[0];
-    String dayEnd = datePartsEnd[1];
-    String yearEnd = datePartsEnd[2];
-    endDayInt = dateFromShuttleProgramStart(Integer.valueOf(yearEnd), Integer.valueOf(monthEnd), Integer.valueOf(dayEnd));
-    
-    dayInterval = endDayInt - startDayInt;
+    startDayInt = DateFromShuttleProgramStart(Integer.valueOf(year), Integer.valueOf(month), Integer.valueOf(day));
     
   }
   // function to calculate # of days since start of space program for year/month/day values
   
-  public int dateFromShuttleProgramStart(int endYear_, int endMonth_, int endDay_){
+  public int DateFromShuttleProgramStart(int endYear_, int endMonth_, int endDay_){
   
     int startYear = SHUTTLESTARTYEAR;
     int startMonth = SHUTTLESTARTMONTH;
@@ -74,6 +67,36 @@ public class Mission {
     int difInDays = (int) ((endDate.getTime() - startDate.getTime())/(1000*60*60*24));
     
     return (difInDays);
+  }
+  public String getMissionName(){
+    return (name);
+  }
+  
+  public void AssignHeadlines(String launchHeadlineText_, String launchHeadlineImportance_, String crashHeadline_) {
+    launchHeadlineText = launchHeadlineText_;
+    launchHeadlineImportance = launchHeadlineImportance_;
+    if(doesItCrash == true){
+      crashHeadline = crashHeadline_;
+    }
+  }
+}
+
+public class Shuttle {
+  // properties
+  private String name;
+  private HashMap<String, Mission> missionHash = new HashMap<String,Mission>();
+  private HashMap<Integer, String> launchDays = new HashMap<Integer, String>();
+  private Boolean didShuttleCrash;
+  private Boolean crashDay;
+  private String crashHeadlineText;
+  private String crashHeadlineImportance;
+  
+  public Shuttle (String name_) {
+    name = name_;
+  }
+  public void addNewMission (Mission newMission){
+    missionHash.put(newMission.getMissionName(), newMission);
+    // look for crash and route data appropriately if crashed
   }
 }
 
