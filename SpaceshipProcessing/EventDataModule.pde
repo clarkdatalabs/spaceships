@@ -26,14 +26,14 @@ public class Mission {
   private String startDayString;
   private int distanceTraveled;
   private int flightTime;
-  private int doesItCrash;
+  private boolean doesItCrash;
   private int startDayInt;
   private String launchHeadlineText;
   private String launchHeadlineImportance;
   private String crashHeadline;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, int doesItCrash_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, boolean doesItCrash_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
@@ -89,12 +89,18 @@ public class Shuttle {
   //have attributes such as size, position
   //add different states - normal, boost [swap image during animation], broken [doesItCrash], decommissioned [gray it out]
   private String name;
-  private HashMap<String, Mission> missionHash = new HashMap<String,Mission>();
-  private HashMap<Integer, String> launchDays = new HashMap<Integer, String>();
-  private Boolean didShuttleCrash;
+  private int didShuttleCrash;
   private Boolean crashDay;
   private String crashHeadlineText;
   private String crashHeadlineImportance;
+  
+  //holds current position of shuttle
+  private int currentX;
+  private int currentY; 
+  
+  //holds future position of shuttle after new mission object comes in
+  private int futureX;
+  private int futureY; 
   
   public Shuttle (String name_) {
     name = name_;
