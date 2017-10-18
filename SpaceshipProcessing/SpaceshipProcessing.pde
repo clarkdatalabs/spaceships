@@ -1,7 +1,6 @@
 PImage backgroundImg;
 // Initializing global variables to keep track of time
 
-PShape shape1;
 int dayCount;
 //Initializaing table viable to store CSV file
 Table shuttleInfo;
@@ -28,15 +27,18 @@ void setup(){
    
   //Load CSV file. 
   shuttleInfo = loadTable("../spaceshipDummyData.csv", "header");
-  /*
-  Extract data from each cell by:
-  shuttleInfo.getInt(row#, columnName) or shuttleInfo.getString(row#, columnName)
-  row# starts at the first row under headers as 0.
-  shuttleInfo.getInt(0,"Duration Hours") returns 54
-  shuttleInfo.getString(0, "Shuttle") returns "Columbia"
-  */
 
-  // set the data to Missions
+  // set the data from CSV to Missions
+  for(TableRow row: shuttleInfo.rows()){
+   String missionName = row.getString("Mission");
+   String shuttleUsed = row.getString("Shuttle");
+   String startDayString = row.getString("Mission Date");
+   int distanceTraveled = row.getInt("Miles Flown #");
+   int flightTime = row.getInt("Duration Hours");
+   int doesItCrash = row.getInt("Crash or Not");
+   Mission mission = new Mission(missionName, shuttleUsed, startDayString, distanceTraveled, flightTime, doesItCrash);
+   allMissions.put(mission.startDayInt, mission);
+  }
 }
 void draw(){
   // Draw background image

@@ -26,14 +26,14 @@ public class Mission {
   private String startDayString;
   private int distanceTraveled;
   private int flightTime;
-  private boolean doesItCrash;
+  private int doesItCrash;
   private int startDayInt;
   private String launchHeadlineText;
   private String launchHeadlineImportance;
   private String crashHeadline;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, boolean doesItCrash_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, int doesItCrash_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
