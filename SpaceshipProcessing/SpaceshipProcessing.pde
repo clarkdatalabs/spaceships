@@ -1,5 +1,7 @@
 PImage backgroundImg;
 // Initializing global variables to keep track of time
+
+PShape shape1;
 int dayCount;
 //Initializaing table viable to store CSV file
 Table shuttleInfo;

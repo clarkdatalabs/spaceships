@@ -83,6 +83,11 @@ public class Mission {
 
 public class Shuttle {
   // properties
+  //focus more on drawing
+  //add move function [distanceTraveled]
+  //import svgs
+  //have attributes such as size, position
+  //add different states - normal, boost [swap image during animation], broken [doesItCrash], decommissioned [gray it out]
   private String name;
   private HashMap<String, Mission> missionHash = new HashMap<String,Mission>();
   private HashMap<Integer, String> launchDays = new HashMap<Integer, String>();
