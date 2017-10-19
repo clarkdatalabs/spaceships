@@ -1,0 +1,6 @@
+object_name,avg_dist_from_sun_(million_miles),illustration_file_name
+Sun,0,sun.svg
+Mercury,36.74,mercury.svg
+Venus,67.24,venus.svg
+Earth,92.96,earth.svg
+Mars,142.3,mars.svg
