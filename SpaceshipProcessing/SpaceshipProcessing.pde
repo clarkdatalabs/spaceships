@@ -39,6 +39,7 @@ void setup(){
    Mission mission = new Mission(missionName, shuttleUsed, startDayString, distanceTraveled, flightTime, doesItCrash);
    allMissions.put(mission.getStartDay(), mission);
    println(missionName, " ", mission.getStartDay());
+   
   }
 }
 void draw(){
@@ -55,6 +56,9 @@ void draw(){
   if (currentMissionIfToday != null) {
     println("Day ", dayCount, " is a launch mission!!");
   }
+  
+  
+  
 
   
 }
