@@ -26,14 +26,14 @@ public class Mission {
   private String startDayString;
   private int distanceTraveled;
   private int flightTime;
-  private boolean doesItCrash;
+  private int doesItCrash;
   private int startDayInt;
   private String launchHeadlineText;
   private String launchHeadlineImportance;
   private String crashHeadline;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, boolean doesItCrash_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, int doesItCrash_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
@@ -75,7 +75,7 @@ public class Mission {
   public void AssignHeadlines(String launchHeadlineText_, String launchHeadlineImportance_, String crashHeadline_) {
     launchHeadlineText = launchHeadlineText_;
     launchHeadlineImportance = launchHeadlineImportance_;
-    if(doesItCrash == true){
+    if(doesItCrash == 1){
       crashHeadline = crashHeadline_;
     }
   }
@@ -106,7 +106,7 @@ public class Shuttle {
     name = name_;
   }
   public void addNewMission (Mission newMission){
-    missionHash.put(newMission.getMissionName(), newMission);
+    //missionHash.put(newMission.getMissionName(), newMission);
     // look for crash and route data appropriately if crashed
   }
 }
