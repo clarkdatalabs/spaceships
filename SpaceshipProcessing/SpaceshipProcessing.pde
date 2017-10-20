@@ -3,7 +3,7 @@ PImage backgroundImg;
 
 int dayCount;
 //Initializaing table viable to store CSV file
-Table shuttleInfo;
+Table missionTableData;
 // Create a HashMap of Shuttle objects, each of which will contain a collection of Missions and other information
 HashMap<String, Shuttle> allShuttles = new HashMap<String,Shuttle>();
 String[] SHUTTLENAMES = {"Columbia", "Challenger", "Discovery", "Atlantis", "Endeavour"};
@@ -26,10 +26,10 @@ void setup(){
   }
    
   //Load CSV file. 
-  shuttleInfo = loadTable("../spaceshipDummyData.csv", "header");
+  missionTableData = loadTable("../spaceshipDummyData.csv", "header");
 
   // set the data from CSV to Missions
-  for(TableRow row: shuttleInfo.rows()){
+  for(TableRow row: missionTableData.rows()){
    String missionName = row.getString("Mission");
    String shuttleUsed = row.getString("Shuttle");
    String startDayString = row.getString("Mission Date");
@@ -37,7 +37,8 @@ void setup(){
    int flightTime = row.getInt("Duration Hours");
    int doesItCrash = row.getInt("Crash or Not");
    Mission mission = new Mission(missionName, shuttleUsed, startDayString, distanceTraveled, flightTime, doesItCrash);
-   allMissions.put(mission.startDayInt, mission);
+   allMissions.put(mission.getStartDay(), mission);
+   println(missionName, " ", mission.getStartDay());
   }
 }
 void draw(){
@@ -47,9 +48,13 @@ void draw(){
   if (frameCount % 2 == 1)
   {
     dayCount = dayCount + 1;
-    println("A month has passed! This is day", dayCount);
+    //println("his is day", dayCount);
   }
-  println("And the framerate is", frameRate);
+  //println("And the framerate is", frameRate);
+  Mission currentMissionIfToday = allMissions.get(dayCount);
+  if (currentMissionIfToday != null) {
+    println("Day ", dayCount, " is a launch mission!!");
+  }
 
   
 }

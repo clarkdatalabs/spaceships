@@ -47,7 +47,8 @@ public class Mission {
     String month = dateParts[0];
     String day = dateParts[1];
     String year = dateParts[2];
-    startDayInt = DateFromShuttleProgramStart(Integer.valueOf(year), Integer.valueOf(month), Integer.valueOf(day));
+    //Note: Need to add 1900 to year to correctly convert two-digit years to four digit (e.g. "89" to 1989)
+    startDayInt = DateFromShuttleProgramStart((Integer.valueOf(year)+1900), Integer.valueOf(month), Integer.valueOf(day));
     
   }
   // function to calculate # of days since start of space program for year/month/day values
@@ -71,6 +72,9 @@ public class Mission {
   public String getMissionName(){
     return (name);
   }
+  public Integer getStartDay(){
+    return (startDayInt);
+  }
   
   public void AssignHeadlines(String launchHeadlineText_, String launchHeadlineImportance_, String crashHeadline_) {
     launchHeadlineText = launchHeadlineText_;
@@ -78,7 +82,7 @@ public class Mission {
     if(doesItCrash == 1){
       crashHeadline = crashHeadline_;
     }
-  }
+  } 
 }
 
 public class Shuttle {
