@@ -24,31 +24,33 @@ public class Mission {
   // for simplicity when startDay and endDay are initialized, should be converted to
   // ints where 4/12/81 == day 
   private String startDayString;
+  private int startYear;
   private int distanceTraveled;
   private int flightTime;
   private int doesItCrash;
+  private int isItFinal;
   private int startDayInt;
   private String launchHeadlineText;
   private String launchHeadlineImportance;
   private String crashHeadline;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, int doesItCrash_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int startYear_, int distanceTraveled_, int flightTime_, int doesItCrash_, int isItFinal_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
+    startYear = startYear_;
     distanceTraveled = distanceTraveled_;
     flightTime = flightTime_;
     doesItCrash = doesItCrash_;
+    isItFinal = isItFinal_;
     
     // takes month/day/year formatted date (e.g. 07/14/1989) and calculates # of days since
     // start of shuttle flight program, which the Shuttle class stores in the dayInterval variable
     String [] dateParts = startDayString.split("/");
     String month = dateParts[0];
     String day = dateParts[1];
-    String year = dateParts[2];
-    //Note: Need to add 1900 to year to correctly convert two-digit years to four digit (e.g. "89" to 1989)
-    startDayInt = DateFromShuttleProgramStart((Integer.valueOf(year)+1900), Integer.valueOf(month), Integer.valueOf(day));
+    startDayInt = DateFromShuttleProgramStart(startYear, Integer.valueOf(month), Integer.valueOf(day));
     
   }
   // function to calculate # of days since start of space program for year/month/day values
