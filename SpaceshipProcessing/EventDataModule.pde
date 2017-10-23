@@ -24,30 +24,33 @@ public class Mission {
   // for simplicity when startDay and endDay are initialized, should be converted to
   // ints where 4/12/81 == day 
   private String startDayString;
+  private int startYear;
   private int distanceTraveled;
   private int flightTime;
-  private boolean doesItCrash;
+  private int doesItCrash;
+  private int isItFinal;
   private int startDayInt;
   private String launchHeadlineText;
   private String launchHeadlineImportance;
   private String crashHeadline;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, int distanceTraveled_, int flightTime_, boolean doesItCrash_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int startYear_, int distanceTraveled_, int flightTime_, int doesItCrash_, int isItFinal_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
+    startYear = startYear_;
     distanceTraveled = distanceTraveled_;
     flightTime = flightTime_;
     doesItCrash = doesItCrash_;
+    isItFinal = isItFinal_;
     
     // takes month/day/year formatted date (e.g. 07/14/1989) and calculates # of days since
     // start of shuttle flight program, which the Shuttle class stores in the dayInterval variable
     String [] dateParts = startDayString.split("/");
     String month = dateParts[0];
     String day = dateParts[1];
-    String year = dateParts[2];
-    startDayInt = DateFromShuttleProgramStart(Integer.valueOf(year), Integer.valueOf(month), Integer.valueOf(day));
+    startDayInt = DateFromShuttleProgramStart(startYear, Integer.valueOf(month), Integer.valueOf(day));
     
   }
   // function to calculate # of days since start of space program for year/month/day values
@@ -71,46 +74,15 @@ public class Mission {
   public String getMissionName(){
     return (name);
   }
+  public Integer getStartDay(){
+    return (startDayInt);
+  }
   
   public void AssignHeadlines(String launchHeadlineText_, String launchHeadlineImportance_, String crashHeadline_) {
     launchHeadlineText = launchHeadlineText_;
     launchHeadlineImportance = launchHeadlineImportance_;
-    if(doesItCrash == true){
+    if(doesItCrash == 1){
       crashHeadline = crashHeadline_;
     }
-  }
+  } 
 }
-
-public class Shuttle {
-  // properties
-  //focus more on drawing
-  //add move function [distanceTraveled]
-  //import svgs
-  //have attributes such as size, position
-  //add different states - normal, boost [swap image during animation], broken [doesItCrash], decommissioned [gray it out]
-  private String name;
-  private int didShuttleCrash;
-  private Boolean crashDay;
-  private String crashHeadlineText;
-  private String crashHeadlineImportance;
-  
-  //holds current position of shuttle
-  private int currentX;
-  private int currentY; 
-  
-  //holds future position of shuttle after new mission object comes in
-  private int futureX;
-  private int futureY; 
-  
-  public Shuttle (String name_) {
-    name = name_;
-  }
-  public void addNewMission (Mission newMission){
-    missionHash.put(newMission.getMissionName(), newMission);
-    // look for crash and route data appropriately if crashed
-  }
-}
-
-// Here we need to create a function to load information from CSV files and create an array
-// (Or if we want to fancy another class) for each shuttle consisting of each mission flown
-// Then, later on in the draw side of things, we can check 
