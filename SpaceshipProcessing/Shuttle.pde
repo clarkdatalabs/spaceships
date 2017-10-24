@@ -47,7 +47,9 @@ public class Shuttle {
   }
   
   public PShape getShape(){
-    return shuttleShape[state];
+    
+    //return shuttleShape[stateNum];
+    return shape_1;
   }
   
   public void addNewMission (Mission newMission){

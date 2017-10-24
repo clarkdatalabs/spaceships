@@ -111,7 +111,7 @@ void draw(){
       Shuttle shuttle_to_draw = allShuttles.get(name);
       if(shuttle_to_draw.hasItStarted == 1){
         //has its shape displayed (x,y,w,h needed to be replaced)
-        shape(shuttle_to_draw.getShape(),x ,y ,w, h);
+        shape(shuttle_to_draw.getShape(),10 ,15 ,30, 40);
       }
     }
   }
