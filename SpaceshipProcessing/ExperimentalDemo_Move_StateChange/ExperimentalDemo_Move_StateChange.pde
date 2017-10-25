@@ -58,6 +58,7 @@ public class Shuttle {
   
   void appereance(){
    ellipse(place[0],place[1], 10, 20);
+   text("Colombia", place[0],place[1] + 115/2);
    image(getShuttleState(), place[0], place[1], 200, 115);
   }
   
@@ -68,7 +69,7 @@ public class Shuttle {
 }
 
 
-
+int dayCount = 0;
 
 int state;
 Shuttle round;
@@ -94,11 +95,18 @@ void setup(){
   
   state = 0;
   round = new Shuttle(blue, blueBoost, crash, decommissioned);
+  
+  
+  textAlign(CENTER);
 }
 
 void draw(){
   background(100,100,100); 
   
+  dayCount++;
+  
+  textSize(20);
+  text(dayCount + " days from 04/11/81", width/2, 30);
   //have even to trigger state change
   if(mousePressed){
     state = 1;
@@ -113,6 +121,7 @@ void draw(){
   }
   
   //update the current state information to display
+  textSize(10);
   fill(round.colorN(state));
   round.appereance();
 }

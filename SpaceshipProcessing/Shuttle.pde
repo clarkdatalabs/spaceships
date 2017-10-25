@@ -1,6 +1,7 @@
 // An experimental demo of embedding moving, current state into a class
 
 //shuttles
+String name;
 PImage blue;
 PImage blueBoost;
 PImage red;
@@ -16,6 +17,9 @@ PImage whiteBoost;
 PImage crash;
 PImage decommissioned;
 
+//x should be consistant with earth, y should increase by a step 
+float[] place = {100,100};
+
 
 //each shuttle should be passed the 4 image states (normal, boost, crashed, decommissioned
 public class Shuttle {
@@ -26,7 +30,11 @@ public class Shuttle {
   PImage Decommissioned;
   PImage CurrentState;
   
-  Shuttle (PImage shuttleColor, PImage shuttleColorBoost, PImage crashed, PImage outOfService){
+  //0 is hasn't, 1 is has
+  private int hasItStarted = 0;
+  
+  Shuttle (String _name, PImage shuttleColor, PImage shuttleColorBoost, PImage crashed, PImage outOfService){
+    name = _name;
     Color = shuttleColor;
     ColorBoost = shuttleColorBoost;
     Crashed = crashed;
@@ -35,7 +43,7 @@ public class Shuttle {
     
   }
   
-  float[] place = {100,100};
+  
   // In our case, maybe here we have the list of image files
   color[] stateColor = {#4ECCEA,#EA4E8F, #C1B7BC};
   
@@ -57,7 +65,7 @@ public class Shuttle {
 
   
   void appereance(){
-   ellipse(place[0],place[1], 10, 20);
+   text(name, place[0],place[1]);
    image(getShuttleState(), place[0], place[1], 200, 115);
   }
   
@@ -93,26 +101,5 @@ void setup(){
   decommissioned = loadImage("../Shuttle_PNGs/shuttle-gray_out_of_service.png");
   
   state = 0;
-  round = new Shuttle(blue, blueBoost, crash, decommissioned);
-}
-
-void draw(){
-  background(100,100,100); 
   
-  //have even to trigger state change
-  if(mousePressed){
-    state = 1;
-    round.move();
-  }else if(keyPressed){
-   state = 2; 
-   println("brocken");
-  }else{
-    if(state != 2){
-     state = 0;
-    }
-  }
-  
-  //update the current state information to display
-  fill(round.colorN(state));
-  round.appereance();
 }

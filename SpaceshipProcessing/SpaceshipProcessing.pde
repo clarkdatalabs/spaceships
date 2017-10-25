@@ -2,6 +2,8 @@ PImage backgroundImg;
 // Initializing global variables to keep track of time
 
 int dayCount;
+int missionCount;
+String missionCountStr;
 int framePaused;
 int framcount_startPause;
 
@@ -27,6 +29,7 @@ void setup(){
   frameRate(60);
   // Set monthCount at 0
   dayCount = 0;  
+  missionCount = 0;
   framePaused = 0;
   // Iterate through SHUTTLENAMES to to populate allShuttles HashMap with Shuttle objects
   for (String s: SHUTTLENAMES) {
@@ -50,6 +53,8 @@ void setup(){
    allMissions.put(mission.getStartDay(), mission);
    println(missionName, " ", mission.getStartDay());
   }
+  
+  textAlign(CENTER);
 }
 
 
@@ -62,15 +67,17 @@ void draw(){
     // Every other frame (30 frames/second at 60 fps framerate) a day passes, so: frame/day = 2/1
     if ((frameCount - framePaused) % 2 == 1){
       dayCount = dayCount + 1;
-      /*println("this is day", dayCount);
-      println("And the framerate is", frameRate);*/
+      textSize(20);
+      text(dayCount + " days from 04/11/81", width/2, 30);
       Mission currentMission = allMissions.get(dayCount);
       
       // If happen to be a mission this day, then switch mode and get the shuttle accordingly
       if (currentMission != null) {        
         missionMode = 1;
+        missionCount ++;
+        if()
         framcount_startPause = frameCount;
-        /*println("Day ", dayCount, " is a launch mission!!");*/
+        text("This day is the" + missionCountStr + "launch mission!!", width/2, 60);
         //get shuttle accordingly
         Shuttle currentShuttle = allShuttles.get(currentMission.shuttleUsed);
         //if this shuttle hasn'et be used before, then tell it has been used so it will show up
@@ -107,11 +114,12 @@ void draw(){
     
     
     // Draw every already-launched shuttle
+    textSize(10);
     for (String name: SHUTTLENAMES){
       Shuttle shuttle_to_draw = allShuttles.get(name);
       if(shuttle_to_draw.hasItStarted == 1){
         //has its shape displayed (x,y,w,h needed to be replaced)
-        shape(shuttle_to_draw.getShape(),10 ,15 ,30, 40);
+        shuttle_to_draw.appereance();
       }
     }
   }
