@@ -70,8 +70,8 @@ public class Shuttle {
 
 
 
-int state = 0;
-Shuttle round = new Shuttle(blue, blueBoost, crash, decommissioned);
+int state;
+Shuttle round;
 
 void setup(){
  size(1000,500);
@@ -91,6 +91,9 @@ void setup(){
   whiteBoost = loadImage("../Shuttle_PNGs/shuttle-white_boost.png");
   crash = loadImage("../Shuttle_PNGs/shuttle-gray_crashed.png");
   decommissioned = loadImage("../Shuttle_PNGs/shuttle-gray_out_of_service.png");
+  
+  state = 0;
+  round = new Shuttle(blue, blueBoost, crash, decommissioned);
 }
 
 void draw(){

@@ -1,63 +1,118 @@
+// An experimental demo of embedding moving, current state into a class
+
+//shuttles
+PImage blue;
+PImage blueBoost;
+PImage red;
+PImage redBoost;
+PImage yellow;
+PImage yellowBoost;
+PImage green;
+PImage greenBoost;
+PImage purple;
+PImage purpleBoost;
+PImage white;
+PImage whiteBoost;
+PImage crash;
+PImage decommissioned;
+
+
+//each shuttle should be passed the 4 image states (normal, boost, crashed, decommissioned
 public class Shuttle {
-  // properties
-  //focus more on drawing
-  //add move function [distanceTraveled]
-  //DONE//import svgs
-  //have attributes such as size, position
-  //DONE//add different states - normal, boost [swap image during animation], broken [doesItCrash], decommissioned [gray it out]
-  private String name;
   
-  //0 is hasn't, 1 is has
-  private int hasItStarted = 0;
+  PImage Color;
+  PImage ColorBoost;
+  PImage Crashed;
+  PImage Decommissioned;
+  PImage CurrentState;
   
-  private Boolean crashDay;
-  private String crashHeadlineText;
-  private String crashHeadlineImportance;
-  
-  // shapes of current shuttle's state 0: normal; 1: boost; 2: crashed; 3: retired 
-  private int state = 0;
-  private PShape shape_0 = loadShape("../images/illustrations/shuttle-white.svg");
-  private PShape shape_1 = loadShape("../images/illustrations/shuttle-white_boost.svg");
-  private PShape shape_2 = loadShape("../images/illustrations/shuttle-gray_crashed.svg");
-  private PShape shape_3 = loadShape("../images/illustrations/shuttle-gray_out_of_service.svg");
-  private PShape[] shuttleShapes = {shape_0, shape_1, shape_2, shape_3};
-  
-  //holds current position of shuttle
-  private int currentX;
-  private int currentY; 
-  
-  //holds future position of shuttle after new mission object comes in
-  private int futureX;
-  private int futureY; 
-  
-  //Constructor
-  public Shuttle (String name_) {
-    name = name_;
-  }
-  
-  //switch unused shuttle into used mode, which is from hide to unhide
-  public void start(){
-   if(hasItStarted == 0){
-    hasItStarted = 1; 
-   }
-  }
-  
-  public void setState(int stateNum){
-    state = stateNum;
-  }
-  
-  public PShape getShape(){
+  Shuttle (PImage shuttleColor, PImage shuttleColorBoost, PImage crashed, PImage outOfService){
+    Color = shuttleColor;
+    ColorBoost = shuttleColorBoost;
+    Crashed = crashed;
+    Decommissioned = outOfService;
+    CurrentState = Color;
     
-    //return shuttleShape[stateNum];
-    return shape_1;
   }
   
-  public void addNewMission (Mission newMission){
-    //missionHash.put(newMission.getMissionName(), newMission);
-    // look for crash and route data appropriately if crashed
+  float[] place = {100,100};
+  // In our case, maybe here we have the list of image files
+  color[] stateColor = {#4ECCEA,#EA4E8F, #C1B7BC};
+  
+
+  void move(){
+    place[0]++;
+    place[1]++;
+
   }
+  
+  
+  void setShuttleState(PImage shuttle){
+    this.CurrentState = shuttle;
+  }
+  
+  PImage getShuttleState(){
+    return CurrentState;
+  }
+
+  
+  void appereance(){
+   ellipse(place[0],place[1], 10, 20);
+   image(getShuttleState(), place[0], place[1], 200, 115);
+  }
+  
+  color colorN(int state){
+    return stateColor[state];
+  }
+
 }
 
-// Here we need to create a function to load information from CSV files and create an array
-// (Or if we want to fancy another class) for each shuttle consisting of each mission flown
-// Then, later on in the draw side of things, we can check 
+
+
+
+int state;
+Shuttle round;
+
+void setup(){
+ size(1000,500);
+ smooth();
+ 
+  blue = loadImage("../Shuttle_PNGs/shuttle-blue.png");
+  blueBoost = loadImage("../Shuttle_PNGs/shuttle-blue_boost.png");
+  red = loadImage("../Shuttle_PNGs/shuttle-red.png");
+  redBoost = loadImage("../Shuttle_PNGs/shuttle-red_boost.png");
+  yellow = loadImage("../Shuttle_PNGs/shuttle-yellow.png");
+  yellowBoost = loadImage("../Shuttle_PNGs/shuttle-yellow_boost.png");
+  green = loadImage("../Shuttle_PNGs/shuttle-green.png");
+  greenBoost = loadImage("../Shuttle_PNGs/shuttle-green_boost.png");
+  purple = loadImage("../Shuttle_PNGs/shuttle-purple.png");
+  purpleBoost = loadImage("../Shuttle_PNGs/shuttle-purple_boost.png");
+  white = loadImage("../Shuttle_PNGs/shuttle-white.png");
+  whiteBoost = loadImage("../Shuttle_PNGs/shuttle-white_boost.png");
+  crash = loadImage("../Shuttle_PNGs/shuttle-gray_crashed.png");
+  decommissioned = loadImage("../Shuttle_PNGs/shuttle-gray_out_of_service.png");
+  
+  state = 0;
+  round = new Shuttle(blue, blueBoost, crash, decommissioned);
+}
+
+void draw(){
+  background(100,100,100); 
+  
+  //have even to trigger state change
+  if(mousePressed){
+    state = 1;
+    round.move();
+  }else if(keyPressed){
+   state = 2; 
+   println("brocken");
+  }else{
+    if(state != 2){
+     state = 0;
+    }
+  }
+  
+  //update the current state information to display
+  fill(round.colorN(state));
+  round.appereance();
+}
