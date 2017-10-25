@@ -1,6 +1,5 @@
 PImage backgroundImg;
 // Initializing global variables to keep track of time
-
 int dayCount;
 int missionCount;
 String missionCountStr;
@@ -15,9 +14,20 @@ String[] SHUTTLENAMES = {"Columbia", "Challenger", "Discovery", "Atlantis", "End
 // Create a HashMap of Missions in relation with the dayCountInt of startDate
 HashMap<Integer, Mission> allMissions = new HashMap<Integer, Mission>();
 
-//missionMode of 0 is no mission, 1 is missioning 
-int missionMode = 0;
-PShape shuttleShape;
+//CurrentSituation
+  //missionMode of 0 is no mission, 1 is missioning 
+int missionMode;
+int numOfShuttle;
+
+//what is needed in mission mode
+Mission currentMission;
+Shuttle currentShuttle;
+float missionDist;
+float missionTime;
+float missionSpeed;
+float distCoef;//need a initiatial num in setup(), the unit is px/mile
+float timeCoef;//unit is frameCount/hour
+
 
 void setup(){
   size(1440, 800);
@@ -29,8 +39,12 @@ void setup(){
   frameRate(60);
   // Set monthCount at 0
   dayCount = 0;  
+  missionMode = 0;
   missionCount = 0;
   framePaused = 0;
+  numOfShuttle = 0;
+  //distCoef = ?;
+  timeCoef = 2;//which means a 60-hour mission takes 2 second, 120-hour mission takes 4 seconds
   // Iterate through SHUTTLENAMES to to populate allShuttles HashMap with Shuttle objects
   for (String s: SHUTTLENAMES) {
     allShuttles.put(s, new Shuttle(s));
@@ -51,7 +65,7 @@ void setup(){
    int isItFinal = row.getInt("Final or Not");
    Mission mission = new Mission(missionName, shuttleUsed, startDayString, startYear, distanceTraveled, flightTime, doesItCrash, isItFinal);
    allMissions.put(mission.getStartDay(), mission);
-   println(missionName, " ", mission.getStartDay());
+   /*println(missionName, " ", mission.getStartDay());*/
   }
   
   textAlign(CENTER);
@@ -69,30 +83,55 @@ void draw(){
       dayCount = dayCount + 1;
       textSize(20);
       text(dayCount + " days from 04/11/81", width/2, 30);
-      Mission currentMission = allMissions.get(dayCount);
+      currentMission = allMissions.get(dayCount);
       
-      // If happen to be a mission this day, then switch mode and get the shuttle accordingly
+      // If happen to be a mission this day, then switch mode and get the shuttle accordingly. Otherwise, dayCount goes on
       if (currentMission != null) {        
         missionMode = 1;
-        missionCount ++;
-        if()
         framcount_startPause = frameCount;
-        text("This day is the" + missionCountStr + "launch mission!!", width/2, 60);
+        
+        //show which mission this is         
+        missionCount ++;
+        if(missionCount % 10 == 1 && missionCount % 100 != 11){
+          missionCountStr = Integer.toString(missionCount) + "st";
+        }else if(missionCount % 10 == 2 && missionCount % 100 != 12){
+          missionCountStr = Integer.toString(missionCount) + "nd";
+        }else if(missionCount % 10 == 3 && missionCount % 100 != 13){
+          missionCountStr = Integer.toString(missionCount) + "rd";
+        }else{
+          missionCountStr = Integer.toString(missionCount) + "th";
+        }
+        text( currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
+        
         //get shuttle accordingly
-        Shuttle currentShuttle = allShuttles.get(currentMission.shuttleUsed);
-        //if this shuttle hasn'et be used before, then tell it has been used so it will show up
-        currentShuttle.start();
+        currentShuttle = allShuttles.get(currentMission.shuttleUsed);
+        //if this shuttle hasn't been used before, then tell it has been used so it will show up
+        currentShuttle.start(numOfShuttle);
+        numOfShuttle ++;
+        
         //set its state to "boosting", so that it will show accordingly
         currentShuttle.setState(1);
+        
+        //set goal dist,time,velocity in this mission
+        missionDist = currentMission.distanceTraveled * distCoef; 
+        missionTime = currentMission.flightTime * timeCoef; //get how many frameCount it takes
+        missionSpeed = missionDist/missionTime; //get how many pxs it moves per frameCount
       }
-    }
-    
+    }    
   }
   
   //When is in a Mission, missionMode == 1;
   else{
-    /*If happen to be the end of the mission   
-    if(...........){
+    //know the date and mission name of now
+    textSize(20);
+    text(dayCount + " days from 04/11/81", width/2, 30);
+    text( currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
+    
+    currentShuttle.cumulativeDist += missionSpeed;
+    missionTime --;
+      
+    //When no time left, mode back to no mission  
+    if(missionTime <= 0){
       missionMode = 0;
       framePaused = frameCount - framcount_startPause;
       
@@ -101,26 +140,25 @@ void draw(){
         if(currentMission.isItFinal == 0){
           //not crash, not final yet, so it goes back to normal for a while
           currentShuttle.setState(0);
-        }else{
+        }//not crashed but final, so it's decommissioned
+          else{
           currentShuttle.setState(3);
         }
-      }else{
+      }//crashed
+        else{
         currentShuttle.setState(2);
       }
     }
-    */
   }
     
     
     
-    // Draw every already-launched shuttle
-    textSize(10);
-    for (String name: SHUTTLENAMES){
-      Shuttle shuttle_to_draw = allShuttles.get(name);
-      if(shuttle_to_draw.hasItStarted == 1){
-        //has its shape displayed (x,y,w,h needed to be replaced)
-        shuttle_to_draw.appereance();
-      }
+  // Draw every already-launched shuttle
+  textSize(10);
+  for (String name: SHUTTLENAMES){
+    Shuttle shuttle_to_draw = allShuttles.get(name);
+    //has its shape displayed (x,y,w,h needed to be replaced)
+    shuttle_to_draw.appereance();
     }
   }
   

@@ -70,7 +70,8 @@ public class Shuttle {
 
 
 int dayCount = 0;
-
+int missionCount = 0;
+String missionCountStr;
 int state;
 Shuttle round;
 
@@ -107,6 +108,20 @@ void draw(){
   
   textSize(20);
   text(dayCount + " days from 04/11/81", width/2, 30);
+  
+  if(dayCount % 10 == 5){
+        missionCount ++;
+        if(missionCount % 10 == 1 && missionCount % 100 != 11){
+          missionCountStr = Integer.toString(missionCount) + "st";
+        }else if(missionCount % 10 == 2 && missionCount % 100 != 12){
+          missionCountStr = Integer.toString(missionCount) + "nd";
+        }else if(missionCount % 10 == 3 && missionCount % 100 != 13){
+          missionCountStr = Integer.toString(missionCount) + "rd";
+        }else{
+          missionCountStr = Integer.toString(missionCount) + "th";
+        }
+        text("This day is the " + missionCountStr + " launch mission!!", width/2, 60);
+  }
   //have even to trigger state change
   if(mousePressed){
     state = 1;
