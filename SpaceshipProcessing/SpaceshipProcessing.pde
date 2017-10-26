@@ -51,7 +51,7 @@ void setup(){
   }
    
   //Load CSV file. 
-  missionTableData = loadTable("../spaceshipDummyData.csv", "header");
+  missionTableData = loadTable("../Working_Shuttle_Stats_Data_with_Articles.csv", "header");
 
   // set the data from CSV to Missions
   for(TableRow row: missionTableData.rows()){
@@ -61,9 +61,11 @@ void setup(){
    int startYear = row.getInt("Year");
    int distanceTraveled = row.getInt("Miles Flown #");
    int flightTime = row.getInt("Duration Hours");
-   int doesItCrash = row.getInt("Crash or Not");
-   int isItFinal = row.getInt("Final or Not");
-   Mission mission = new Mission(missionName, shuttleUsed, startDayString, startYear, distanceTraveled, flightTime, doesItCrash, isItFinal);
+   int doesItCrash = row.getInt("Crash?");
+   int isItFinal = row.getInt("Last Launch?");
+   String articleHeader = row.getString("Article Header");
+   String articleDate = row.getString("Article Date");
+   Mission mission = new Mission(missionName, shuttleUsed, startDayString, startYear, distanceTraveled, flightTime, doesItCrash, isItFinal, articleHeader, articleDate);
    allMissions.put(mission.getStartDay(), mission);
    /*println(missionName, " ", mission.getStartDay());*/
   }
@@ -125,8 +127,10 @@ void draw(){
     //know the date and mission name of now
     textSize(20);
     text(dayCount + " days from 04/11/81", width/2, 30);
-    text( currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
-    
+    text(currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
+    //Print headline at the bottom of the screen
+    textSize(25);
+    text(currentMission.articleHeadline, width/2, 700);
     currentShuttle.cumulativeDist += missionSpeed;
     missionTime --;
       

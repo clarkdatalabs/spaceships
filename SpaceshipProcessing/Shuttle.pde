@@ -9,9 +9,9 @@ float distBetweenShuttle = 0;//need initiate num
 public class Shuttle {
   private String name;
   private PImage state_normal = loadImage("Shuttle_PNGs/shuttle-white.png");
-  private PImage state_boost = loadImage("../Shuttle_PNGs/shuttle-white_boost.png");;
-  private PImage state_crashed = loadImage("../Shuttle_PNGs/shuttle-gray_crashed.png");
-  private PImage state_decommissioned = loadImage("../Shuttle_PNGs/shuttle-gray_out_of_service.png");
+  private PImage state_boost = loadImage("Shuttle_PNGs/shuttle-white_boost.png");;
+  private PImage state_crashed = loadImage("Shuttle_PNGs/shuttle-gray_crashed.png");
+  private PImage state_decommissioned = loadImage("Shuttle_PNGs/shuttle-gray_out_of_service.png");
   private PImage[] state = {state_normal, state_boost, state_crashed, state_decommissioned};
   private int stateNum = 0;
   

@@ -30,12 +30,11 @@ public class Mission {
   private int doesItCrash;
   private int isItFinal;
   private int startDayInt;
-  private String launchHeadlineText;
-  private String launchHeadlineImportance;
-  private String crashHeadline;
+  private String articleHeadline;
+  private String articleDate;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, int startYear_, int distanceTraveled_, int flightTime_, int doesItCrash_, int isItFinal_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int startYear_, int distanceTraveled_, int flightTime_, int doesItCrash_, int isItFinal_, String articleHeadline_, String articleDate_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
@@ -44,6 +43,8 @@ public class Mission {
     flightTime = flightTime_;
     doesItCrash = doesItCrash_;
     isItFinal = isItFinal_;
+    articleHeadline = articleHeadline_;
+    articleDate = articleDate_;
     
     // takes month/day/year formatted date (e.g. 07/14/1989) and calculates # of days since
     // start of shuttle flight program, which the Shuttle class stores in the dayInterval variable
@@ -78,11 +79,5 @@ public class Mission {
     return (startDayInt);
   }
   
-  public void AssignHeadlines(String launchHeadlineText_, String launchHeadlineImportance_, String crashHeadline_) {
-    launchHeadlineText = launchHeadlineText_;
-    launchHeadlineImportance = launchHeadlineImportance_;
-    if(doesItCrash == 1){
-      crashHeadline = crashHeadline_;
-    }
-  } 
+ 
 }
