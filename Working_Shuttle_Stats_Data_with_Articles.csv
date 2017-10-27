@@ -1,136 +1,136 @@
-Crew,Duration Hours,Miles Flown,Miles Flown #,Miles Flown (millions),Mission,Number of Missions,Shuttle,Article Date,Article Header,Crash?,Last Launch?,Mission Date,Year
-2,54,0.9M,0.9,900000,STS-1,1,Columbia,4/13/81,Nation's Hopes Carried Aloft by Shuttle: Delay Caused Some Disquieting Doubts,0,0,4/12/81,1981
-2,54,0.9M,0.9,900000,STS-2,1,Columbia,11/13/81,"Shuttle Rises to Orbit, But a Fuel Cell Fails",0,0,11/12/81,1981
-2,192,3.9M,3.9,3900000,STS-3,1,Columbia,3/23/82,Shuttle Is Lofted Into Earth Orbit for Third Mission: Liftoff is one hour late power unit malfunctions,0,0,3/22/82,1982
-2,169,2.9M,2.9,2900000,STS-4,1,Columbia,6/28/82,"Shuttle, Carrying Military Cargo, Blasts Off in Smoothest Start Yet",0,0,6/27/82,1982
-4,122,1.9M,1.9,1900000,STS-5,1,Columbia,11/11/82,"Shuttle, with Crew of 4, Lifts Off Flawlessly and Launches Its First Satellite",0,0,11/11/82,1982
-4,120,1.8M,1.8,1800000,STS-6,1,Challenger,4/5/83,Liftoff of Challenger Flawless Astronauts Ride New Space Shuttle Into Earth Orbit,0,0,4/4/83,1983
-5,146,2.2M,2.2,2200000,STS-7,1,Challenger,6/23/83,Shuttle Releases and Snares Satellite in a Space Minuet,0,0,6/18/83,1983
-5,145,2.2M,2.2,2200000,STS-8,1,Challenger,8/30/83,Dazzling Liftoff Sends the Shuttle into Earth Orbit: Rockets Ablaze in Night,0,0,8/30/83,1983
-6,247,3.3M,3.3,3300000,STS-9,1,Columbia,11/28/83,Shuttle's Mission Seen Heralding New U.S.-European Cooperation: Space Flight Seen as Opening New Era,0,0,11/28/83,1983
-5,191,2.9M,2.9,2900000,STS-41-B,1,Challenger,2/3/84,Countdown Goes Smoothly for Launching Today of 8-Day Shuttle Mission,0,0,2/3/84,1984
-5,167,2.9M,2.9,2900000,STS-41-C,1,Challenger,4/6/84,Space Shuttle Poised For First Service Call On Satellite In Orbit,0,0,4/6/84,1984
-6,144,2.2M,2.2,2200000,STS-41-D,1,Discovery,8/31/84,Newest Shuttle Fired Into Orbit After 3 Delays: Crew Deploys Satellite,0,0,8/30/84,1984
-7,197,3.4M,3.4,3400000,STS-41-G,1,Challenger,10/6/84,Largest Ever Crew Sent Into Space Blends Interest in Flight and Science,0,0,10/5/84,1984
-5,191,2.9M,2.9,2900000,STS-51-A,1,Discovery,11/9/84,Space Shuttle Is Launched On Satellite Salvage Flight,0,0,11/8/84,1984
-5,73,1.2M,1.2,1200000,STS-51-C,1,Discovery,1/25/85,Shuttle Launched on Secret Mission: Astronauts Begin First Flight with Solely Military Goals,0,0,1/24/85,1985
-7,167,2.5M,2.5,2500000,STS-51-D,1,Discovery,4/13/85,Shuttle Lifts Off After Rain Delay: Satellite Is Deployed,0,0,4/12/85,1985
-7,168,2.9M,2.9,2900000,STS-51-B,1,Challenger,5/5/85,One Thing NASA Can't Settle: Astronauts' Stomachs,0,0,4/29/85,1985
-7,169,2.5M,2.5,2500000,STS-51-G,1,Discovery,6/17/85,Shuttle Lofts Satellite for Arab Lands and P.L.O.,0,0,6/17/85,1985
-7,190,2.9M,2.9,2900000,STS-51-F,1,Challenger,7/30/85,"Challenger Limps Into A Low Orbit As An Engine Fails: 7 Crew Members Are Safe With Other Rockets Operating, Officials Say There Is No Plan to Halt Mission",0,0,7/29/85,1985
-5,170,2.5M,2.5,2500000,STS-51-I,1,Discovery,8/28/85,Orbiting Shuttle Successfully Launches 2 Satellites,0,0,8/27/85,1985
-5,97,1.7M,1.7,1700000,STS-51-J,1,Atlantis,10/5/85,Shuttle on Secret Mission Deploys 2 Satellites,0,0,10/3/85,1985
-8,168,2.5M,2.5,2500000,STS-61-A,1,Challenger,10/29/85,Countdown Begins for Shuttle Flight Carrying 8 on a Scientific Mission: Spacelab is crammed with West German experiments,0,0,10/30/85,1985
-7,165,2.5M,2.5,2500000,STS-61-B,1,Atlantis,11/27/85,Night Launching of Shuttle Begins Amid Searing Light,0,0,11/26/85,1985
-7,146,2.2M,2.2,2200000,STS-61-C,1,Columbia,1/13/86,Shuttle in Space After 7 Delays; Astronauts Launch RCA Satellite,0,0,1/12/86,1986
-7,0,0.0M,0,0,STS-51-L,1,Challenger,1/29/86,"Thousands Watch A Rain of Debris: Shuttle Explodes, Killing All 7 Aboard",1,1,1/28/86,1986
-5,97,1.4M,1.4,1400000,STS-26,1,Discovery,9/29/88,"Space Shuttle, After 32 Months, Makes Comeback Attempt Today",0,0,9/29/88,1988
-5,105,1.8M,1.8,1800000,STS-27,1,Atlantis,12/3/88,Shuttle With Spy Craft Lifts Off As Winds Ease With Minutes Left,0,0,12/2/88,1988
-5,119,1.8M,1.8,1800000,STS-29,1,Discovery,3/14/89,Flight of Shuttle Begins Flawlessly: Spirits at NASA Are Lifted as Craft Overcomes Delays,0,0,3/13/89,1989
-5,96,1.5M,1.5,1500000,STS-30,1,Atlantis,5/5/89,"After a Cliffhanger Countdown, Shuttle Launches a Venus Probe",0,0,5/4/89,1989
-5,121,2.1M,2.1,2100000,STS-28,1,Columbia,8/9/89,"Columbia, Nation's First Shuttle, Is Launched on Pentagon Mission",0,0,8/8/89,1989
-5,119,1.8M,1.8,1800000,STS-34,1,Atlantis,10/19/89,Shuttle Launched After Delay And Galileo Is Sent to Jupiter,0,0,10/18/89,1989
-5,120,2.0M,2,2000000,STS-33,1,Discovery,11/23/89,Shuttle Discovery Blazes Into Night on Secret Mission,0,0,11/22/89,1989
-5,261,4.5M,4.5,4500000,STS-32,1,Columbia,1/10/90,Shuttle in Orbit; Satellite Chase Begins,0,0,1/9/90,1990
-5,106,1.8M,1.8,1800000,STS-36,1,Atlantis,3/1/90,"After Delays, Shuttle Launched on Secret Mission: Success after five launchings are scrubbed",0,0,2/28/90,1990
-5,121,2.1M,2.1,2100000,STS-31,1,Discovery,4/25/90,"Shuttle Soars 381 Miles High, With Telescope and a Dream",0,0,4/24/90,1990
-7,218,3.3M,3.3,3300000,STS-40,1,Columbia,6/6/90,"Postponed Twice, Shuttle Lifts Off: 9-Day Flight Includes Study on Jellyfish and Rodents",0,0,10/6/90,1990
-5,98,1.7M,1.7,1700000,STS-41,1,Discovery,10/7/90,NASA's Failures End As Discovery Lifts Off,0,0,11/15/90,1990
-5,117,2.0M,2,2000000,STS-38,1,Atlantis,11/16/90,Space Shuttle Lifts Off With Secret Military Cargo,0,0,12/2/90,1990
-7,215,3.7M,3.7,3700000,STS-35,1,Columbia,12/3/90,"Shuttle Columbia Soars Into Orbit, Months After Fuel Leaks Surfaced",0,0,4/5/91,1991
-5,143,2.5M,2.5,2500000,STS-37,1,Atlantis,4/6/91,"Atlantis Is Launched, Carrying 5 to Loft $600 Million Observatory",0,0,4/28/91,1991
-7,199,3.5M,3.5,3500000,STS-39,1,Discovery,4/29/91,"Shuttle Is Off at Last, on 8-Day Military Mission Without Secrecy",0,0,6/5/91,1991
-5,213,3.7M,3.7,3700000,STS-43,1,Atlantis,8/2/91,Weather Delays Shuttle Liftoff,0,0,8/2/91,1991
-5,128,2.2M,2.2,2200000,STS-48,1,Discovery,9/13/91,Shuttle Is Launched on a Mission to Study Pollution's Effects on Atmosphere,0,0,9/12/91,1991
-6,166,2.9M,2.9,2900000,STS-44,1,Atlantis,11/25/91,Shuttle Atlantis Is Launched With Military Satellite: The Pentagon saves money by dropping secrecy,0,0,11/24/91,1991
-7,193,3.3M,3.3,3300000,STS-42,1,Discovery,1/23/92,Astronauts From 3 Countries Ride Shuttle Into Orbit,0,0,1/22/92,1992
-7,214,3.3M,3.3,3300000,STS-45,1,Atlantis,3/25/92,Shuttle Lifts Off to Study Atmosphere,0,0,3/24/92,1992
-7,213,4.0M,4,4000000,STS-49,1,Endeavour,5/7/92,New Shuttle Is Set for First Mission: The Nation's Fleet of Space Shuttles is Back to Full Strength,0,0,5/7/92,1992
-7,331,5.8M,5.8,5800000,STS-50,1,Columbia,6/27/92,Shuttle Crew Ignites Foam to Study Fire in Space: Safety is the Astronauts' first concern,0,0,6/25/92,1992
-7,191,3.3M,3.3,3300000,STS-46,1,Atlantis,8/1/92,Space Shuttle Thunders Into Orbit To Fly a Satellite on a Thin Wire,0,0,7/31/92,1992
-7,190,3.3M,3.3,3300000,STS-47,1,Endeavour,9/13/92,U.S.-Japan Mission Is a Shuttle First: 50th Flight Is a Cooperative Venture and Marked by Several Innovations,0,0,9/12/92,1992
-6,236,4.1M,4.1,4100000,STS-52,1,Columbia,10/23/92,Shuttle Launched on Science Mission: main Goal of 10-Day Flight is to Deploy a Tiny Satellite,0,0,10/22/92,1992
-5,175,3.0M,3,3000000,STS-53,1,Discovery,12/2/92,Last Military Mission Of Shuttle Is Set Today,0,0,12/2/92,1992
-5,143,2.5M,2.5,2500000,STS-54,1,Endeavour,1/13/93,"Endeavour Ready To Start Mission: Space Shuttle to Put Satellite Into Orbit, Run Tests and Broadcast to Schools",0,0,1/13/93,1993
-5,222,3.9M,3.9,3900000,STS-56,1,Discovery,4/5/93,Shuttle Readied for Ozone Study: Preparations Move Smoothly for Launching Tomorrow,0,0,4/8/93,1993
-5,335,5.8M,5.8,5800000,STS-62,1,Columbia,4/5/93,"Little Glamour, Lots to Do on This Space Trip: A mission where the research payoffs might take years",0,0,4/26/93,1993
-7,239,4.2M,4.2,4200000,STS-55,1,Columbia,4/27/93,U.S.-German Crew Launched Into Orbit: 90 experiments planned on long-delayed flight,0,0,6/21/93,1993
-6,239,4.1M,4.1,4100000,STS-57,1,Endeavour,6/22/93,4th Endeavour Flight Pursues European Satellite: Shuttle mission may be extended for extra space walks,0,0,9/12/93,1993
-5,236,4.1M,4.1,4100000,STS-51,1,Discovery,9/13/93,"After Delay of Months, Shuttle is Off to Good Start",0,0,10/18/93,1993
-7,336,5.8M,5.8,5800000,STS-58,1,Columbia,10/18/93,Columbia Carries Crew of 7 Into Space,0,0,12/2/93,1993
-7,259,4.4M,4.4,4400000,STS-61,1,Endeavour,12/2/93,Shuttle Blasts Off on Mission to Correct the Space Telescope's Sight: A very complex orbital repair job gets off to a smooth start.,0,0,2/3/94,1994
-6,174,3.4M,3.4,3400000,STS-60,1,Discovery,2/4/94,Shuttle Lifts Off On First Mission With a Russian: Flight Is Hailed as Start of New Era in Space,0,0,3/4/94,1994
-6,269,4.7M,4.7,4700000,STS-59,1,Endeavour,4/10/94,Shuttle Embarks on High-Tech Scrutiny of Environment: Radar images may explain history and enhance the future.,0,0,4/9/94,1994
-7,353,6.1M,6.1,6100000,STS-65,1,Columbia,7/9/94,Newts and Metal Projects Ride Columbia Into Space,0,0,7/8/94,1994
-6,262,4.6M,4.6,4600000,STS-64,1,Discovery,9/10/94,Shuttle Soars Into Orbit to Test Device for Space Rescues,0,0,9/9/94,1994
-6,269,4.7M,4.7,4700000,STS-68,1,Endeavour,10/1/94,Shuttle Soars Into Space on Mission to Detect Environmental Changes on Earth,0,0,9/30/94,1994
-6,262,4.6M,4.6,4600000,STS-66,1,Atlantis,11/4/94,6 Astronauts Are Launched Into Space: Atmosphere Is Focus OF 11-Day Mission,0,0,11/3/94,1994
-6,198,3.0M,3,3000000,STS-63,1,Discovery,2/3/95,Shuttle Blasts Off to Meet Russian Station: A space ballet as rehearsal for an international project,0,0,2/3/95,1995
-7,399,6.9M,6.9,6900000,STS-67,1,Endeavour,5/2/95,Shuttle Endeavour Blasts Off on a 15-Day Astronomy Mission,0,0,3/2/95,1995
-7,235,4.1M,4.1,4100000,STS-71,1,Atlantis,6/3/95,Lovesick Woodpeckers Poke Hole in a Shuttle's Schedule,0,0,6/27/95,1995
-5,214,3.7M,3.7,3700000,STS-70,1,Discovery,7/14/95,"Shuttle Blasts Off, Leaving Woodpecker Threat Behind: Crew to Replace Satellite Lost on Challenger",0,0,7/13/95,1995
-5,260,4.5M,4.5,4500000,STS-69,1,Endeavour,9/8/95,Space Shuttle Takes Off After Month's Delay,0,0,9/7/95,1995
-7,381,6.6M,6.6,6600000,STS-73,1,Columbia,10/21/95,Space Shuttle Is Launched On 16-Day Science Mission,0,0,10/20/95,1995
-5,196,3.4M,3.4,3400000,STS-74,1,Atlantis,11/13/95,"Dodging Clouds, Space Shuttle Begins Its Chase of Russians",0,0,11/12/95,1995
-6,214,3.7M,3.7,3700000,STS-72,1,Endeavour,1/12/96,"Shrugging Off the Cold, Shuttle Sets Off on a Satellite Hunt",0,0,1/11/96,1996
-7,377,6.5M,6.5,6500000,STS-75,1,Columbia,2/23/96,The Shuttle Takes Off for a High-Wire Act,0,0,2/22/96,1996
-6,221,3.8M,3.8,3800000,STS-76,1,Atlantis,3/23/96,"Shuttle Blasts Off, but Hydraulic Leak May Curtail Flight",0,0,3/22/96,1996
-6,240,4.1M,4.1,4100000,STS-77,1,Endeavour,5/20/96,Shuttle Begins 10-Day Technology Flight,0,0,5/19/96,1996
-7,405,7.0M,7,7000000,STS-78,1,Columbia,6/21/96,Shuttle Blasts Off on Mission That Could Be Record Length,0,0,6/20/96,1996
-6,243,3.9M,3.9,3900000,STS-79,1,Atlantis,9/19/96,Russia's Mir And Shuttle Are Flawless In Space Link,0,0,9/16/96,1996
-5,423,7.0M,7,7000000,STS-80,1,Columbia,11/20/96,Shuttle Blasts Off on Mission With 2 Scientific Satellites,0,0,11/19/96,1996
-6,244,3.9M,3.9,3900000,STS-81,1,Atlantis,1/13/97,Atlantis blasts Off in Swift Pursuit of Mir Space Station,0,0,1/12/97,1997
-7,239,3.8M,3.8,3800000,STS-82,1,Discovery,2/12/97,Shuttle Starts Space Telescope Mission,0,0,2/11/97,1997
-7,95,1.5M,1.5,1500000,STS-83,1,Columbia,4/5/97,Shuttle Lifts Off on Mission to Explore Lack of Gravity: A mission focusing in part on how fire reacts in space,0,0,4/4/97,1997
-7,221,3.6M,3.6,3600000,STS-84,1,Atlantis,5/16/97,Shuttle Takes Off to Fortify the Mir Station,0,0,5/15/97,1997
-7,376,6.2M,6.2,6200000,STS-94,1,Columbia,7/2/97,Shuttle Roars Aloft to Complete Mission Interrupted in April,0,0,7/1/97,1997
-6,284,4.7M,4.7,4700000,STS-85,1,Discovery,8/9/97,Astronauts Aboard Discovery Test New Japanese Robot Arm,0,0,8/7/97,1997
-7,259,4.2M,4.2,4200000,STS-86,1,Atlantis,9/28/97,U.S. Space Shuttle Atlantis Docks Safely With Russian Mir,0,0,9/25/97,1997
-6,376,6.5M,6.5,6500000,STS-87,1,Columbia,11/20/97,Shuttle Executes Flip on Its Way Into Orbit,0,0,11/19/97,1997
-7,211,3.6M,3.6,3600000,STS-89,1,Endeavour,1/23/98,Shuttle Blasts Off With Last American to Live on the Mir Station,0,0,1/22/98,1998
-7,381,6.4M,6.4,6400000,STS-90,1,Columbia,4/18/98,Columbia Soars Into Space With a Menagerie on Board,0,0,4/17/98,1998
-7,235,3.8M,3.8,3800000,STS-91,1,Discovery,6/3/98,Shuttle Begins America's Last Mission to Mir: Russians say Mir is ready for guests after a computer repair,0,0,6/2/98,1998
-7,213,3.6M,3.6,3600000,STS-95,1,Discovery,10/25/98,"For John Glenn and the Nation, a Trip Back in Time",0,0,10/29/98,1998
-6,283,4.7M,4.7,4700000,STS-88,1,Endeavour,12/5/98,Space Station's First Construction Crew Lifts Off Aboard the Shuttle,0,0,12/4/98,1998
-7,235,4.1M,4.1,4100000,STS-96,1,Discovery,5/28/99,"Shuttle Bound for Space Station, Supplies in Tow",0,0,5/27/99,1999
-5,118,1.8M,1.8,1800000,STS-93,1,Columbia,7/17/99,Woman Leads Shuttle Crew For History-Making Mission,0,0,7/23/99,1999
-7,191,3.3M,3.3,3300000,STS-103,1,Discovery,12/22/99,Gotcha! Space Shuttle Crew Captures Broken Telescope: Astronauts Will Now Try to Fix It in Space,0,0,12/19/99,1999
-6,269,4.7M,4.7,4700000,STS-99,1,Endeavour,2/11/00,Safety Issues Looming as Number of Shuttle Flights Increases,0,0,2/11/00,2000
-7,285,4.9M,4.9,4900000,STS-100,1,Endeavour,4/20/00,Shuttle Endeavour Heads to Space Station,0,0,5/19/00,2000
-7,237,5.1M,5.1,5100000,STS-101,1,Atlantis,5/20/00,Shuttle Lifts Off on Mission to Fix Space Station,0,0,9/8/00,2000
-7,283,4.9M,4.9,4900000,STS-106,1,Atlantis,9/7/00,Launching of Shuttle Will Begin Push to Complete Space Outpost,0,0,10/11/00,2000
-7,309,5.3M,5.3,5300000,STS-92,1,Discovery,10/14/00,Astronauts Rendezvous With Space Station,0,0,11/30/00,2000
-5,259,4.5M,4.5,4500000,STS-97,1,Endeavour,12/1/00,Shuttle Is Off On 'A Beautiful Night to Fly',0,0,2/7/01,2001
-5,309,5.4M,5.4,5400000,STS-98,1,Atlantis,2/8/01,Shuttle Atlantis Heads for Space Station Carrying Laboratory,0,0,3/8/01,2001
-7,307,5.4M,5.4,5400000,STS-102,1,Discovery,3/7/01,Shuttle Primed for Crew-Exchange Mission to Station,0,0,4/19/01,2001
-5,306,5.3M,5.3,5300000,STS-104,1,Atlantis,7/14/01,"Shuttle, a Little Late, Glides Into Station",0,0,7/12/01,2001
-7,285,4.9M,4.9,4900000,STS-105,1,Discovery,8/10/01,"For Many, the Shuttle's Return Brings Back Doubt and Anxiety",0,0,8/10/01,2001
-7,283,4.8M,4.8,4800000,STS-108,1,Endeavour,12/6/01,"Under Tight Security, Shuttle Lifts Off After a Week's Delay",0,0,12/5/01,2001
-7,262,3.9M,3.9,3900000,STS-109,1,Columbia,3/2/02,"Space Shuttle Launched, but Cooling System Is a Worry",0,0,3/1/02,2002
-7,259,4.5M,4.5,4500000,STS-110,1,Atlantis,4/9/02,"With Seconds To Spare, The Shuttle Takes Off",0,0,4/8/02,2002
-7,332,5.8M,5.8,5800000,STS-111,1,Endeavour,6/6/02,"Delayed for Days, Shuttle Liftoff Sends Crew of 7 to Space Station",0,0,6/5/02,2002
-6,259,4.5M,4.5,4500000,STS-112,1,Atlantis,10/1/02,"Grounded No Longer, Shuttle Atlantis Is Readied for Space",0,0,10/7/02,2002
-7,330,5.7M,5.7,5700000,STS-113,1,Endeavour,11/24/02,Repaired Endeavour Takes Off With New Crew for Space Station,0,0,11/23/02,2002
-7,382,6.6M,6.6,6600000,STS-107,1,Columbia,2/2/03,"Shuttle Breaks Up, 7 Dead: Columbia, With Six Americans and Israeli, Is Lost Over Texas After Starting Descent",1,1,1/16/03,2003
-7,333,5.8M,5.8,5800000,STS-114,1,Discovery,8/3/05,"With Shuttle Program, an Intricate and Integral Partnership for NASA",0,0,7/26/05,2005
-7,306,5.3M,5.3,5300000,STS-121,1,Discovery,7/18/06,All Smiles as Shuttle Ends A Nearly Perfect Mission,0,0,7/4/06,2006
-6,283,4.9M,4.9,4900000,STS-115,1,Atlantis,9/9/06,"Shuttle, Delayed by Faulty Sensor, Will Try Again Today",0,0,9/9/06,2006
-7,309,5.3M,5.3,5300000,STS-116,1,Discovery,12/10/06,Discovery Takes Off on a Complex Mission,0,0,12/9/06,2006
-7,332,5.8M,5.8,5800000,STS-117,1,Atlantis,6/9/07,Shuttle Atlantis Appears to Have a Flawless Liftoff: Videos will be studied for damage to the foam or other parts,0,0,6/8/07,2007
-7,306,5.3M,5.3,5300000,STS-118,1,Endeavour,8/7/07,Teacher-Astronaut to Fly Decades After Challenger,0,0,8/8/07,2007
-7,362,6.2M,6.2,6200000,STS-120,1,Discovery,10/23/07,Florida Weather May Delay Shuttle Launching,0,0,10/23/07,2007
-7,306,5.3M,5.3,5300000,STS-122,1,Atlantis,2/8/08,Atlantis Heads for the Space Station to Deliver a Science Laboratory From Europe,0,0,2/7/08,2008
-7,378,6.6M,6.6,6600000,STS-123,1,Endeavour,3/12/08,Shuttle Is Carrying Laboratory and Robot to Space Station,0,0,3/11/08,2008
-7,330,5.7M,5.7,5700000,STS-124,1,Discovery,5/27/08,Shuttle to Take Big Science Lab to Space Station,0,0,5/31/08,2008
-7,380,6.6M,6.6,6600000,STS-126,1,Endeavour,11/15/08,Shuttle Departs With Gear To Remodel Space Station,0,0,11/14/08,2008
-7,307,5.3M,5.3,5300000,STS-119,1,Discovery,3/29/09,"After 13 Days, Discovery Ends Mission With Smooth Landing",0,0,3/15/09,2009
-7,309,5.3M,5.3,5300000,STS-125,1,Atlantis,5/12/09,Shuttle Atlantis Takes Off For a Last Visit to Hubble,0,0,5/11/09,2009
-7,376,6.5M,6.5,6500000,STS-127,1,Endeavour,7/16/09,Launching of Shuttle Is Marred by Falling Debris,0,0,7/15/09,2009
-7,333,5.7M,5.7,5700000,STS-128,1,Discovery,9/12/09,Shuttle Glides to a California Landing,0,0,8/28/09,2009
-6,259,4.5M,4.5,4500000,STS-129,1,Atlantis,11/17/09,Shuttle Lifts Off for 11-Day Mission,0,0,11/16/09,2009
-6,330,5.7M,5.7,5700000,STS-130,1,Endeavour,2/6/10,"As Shuttle Flights Dwindle, A Series of 'Lasts' Begins",0,0,2/8/10,2010
-7,363,6.2M,6.2,6200000,STS-131,1,Discovery,4/5/10,Shuttle Heads for Space Station With Supplies as Missions Dwindle,0,0,4/5/10,2010
-4,306,5.3M,5.3,5300000,STS-135,1,Atlantis,5/15/10,Shuttle Atlantis Lifts Off for Its Last Planned Flight,0,0,5/14/10,2010
-6,282,4.9M,4.9,4900000,STS-132,1,Atlantis,5/27/10,"For Atlantis, a Flight Path to Retirement ",0,1,2/24/11,2011
-6,307,5.3M,5.3,5300000,STS-133,1,Discovery,2/25/11,"Discovery, Bound for Space Station, Leaves Earth One Last Time",0,1,5/16/11,2011
-6,378,6.5M,6.5,6500000,STS-134,1,Endeavour,5/17/11,Closely Watched Space Shuttle Has Its Last Liftoff,0,1,7/8/11,2011
+Crew,Duration Hours,Miles Flown,Miles Flown #,Miles Flown (millions),Mission,Number of Missions,Shuttle,Article Date,Article Header,Crash?,Last Launch?,Mission Date,Year,Article Date Long
+2,54,0.9M,0.9,900000,STS-1,1,Columbia,4/13/81,Nation's Hopes Carried Aloft by Shuttle: Delay Caused Some Disquieting Doubts,0,0,4/12/81,1981,13-Apr-81
+2,54,0.9M,0.9,900000,STS-2,1,Columbia,11/13/81,"Shuttle Rises to Orbit, But a Fuel Cell Fails",0,0,11/12/81,1981,13-Nov-81
+2,192,3.9M,3.9,3900000,STS-3,1,Columbia,3/23/82,Shuttle Is Lofted Into Earth Orbit for Third Mission: Liftoff is one hour late power unit malfunctions,0,0,3/22/82,1982,23-Mar-82
+2,169,2.9M,2.9,2900000,STS-4,1,Columbia,6/28/82,"Shuttle, Carrying Military Cargo, Blasts Off in Smoothest Start Yet",0,0,6/27/82,1982,28-Jun-82
+4,122,1.9M,1.9,1900000,STS-5,1,Columbia,11/11/82,"Shuttle, with Crew of 4, Lifts Off Flawlessly and Launches Its First Satellite",0,0,11/11/82,1982,11-Nov-82
+4,120,1.8M,1.8,1800000,STS-6,1,Challenger,4/5/83,Liftoff of Challenger Flawless Astronauts Ride New Space Shuttle Into Earth Orbit,0,0,4/4/83,1983,5-Apr-83
+5,146,2.2M,2.2,2200000,STS-7,1,Challenger,6/23/83,Shuttle Releases and Snares Satellite in a Space Minuet,0,0,6/18/83,1983,23-Jun-83
+5,145,2.2M,2.2,2200000,STS-8,1,Challenger,8/30/83,Dazzling Liftoff Sends the Shuttle into Earth Orbit: Rockets Ablaze in Night,0,0,8/30/83,1983,30-Aug-83
+6,247,3.3M,3.3,3300000,STS-9,1,Columbia,11/28/83,Shuttle's Mission Seen Heralding New U.S.-European Cooperation: Space Flight Seen as Opening New Era,0,0,11/28/83,1983,28-Nov-83
+5,191,2.9M,2.9,2900000,STS-41-B,1,Challenger,2/3/84,Countdown Goes Smoothly for Launching Today of 8-Day Shuttle Mission,0,0,2/3/84,1984,3-Feb-84
+5,167,2.9M,2.9,2900000,STS-41-C,1,Challenger,4/6/84,Space Shuttle Poised For First Service Call On Satellite In Orbit,0,0,4/6/84,1984,6-Apr-84
+6,144,2.2M,2.2,2200000,STS-41-D,1,Discovery,8/31/84,Newest Shuttle Fired Into Orbit After 3 Delays: Crew Deploys Satellite,0,0,8/30/84,1984,31-Aug-84
+7,197,3.4M,3.4,3400000,STS-41-G,1,Challenger,10/6/84,Largest Ever Crew Sent Into Space Blends Interest in Flight and Science,0,0,10/5/84,1984,6-Oct-84
+5,191,2.9M,2.9,2900000,STS-51-A,1,Discovery,11/9/84,Space Shuttle Is Launched On Satellite Salvage Flight,0,0,11/8/84,1984,9-Nov-84
+5,73,1.2M,1.2,1200000,STS-51-C,1,Discovery,1/25/85,Shuttle Launched on Secret Mission: Astronauts Begin First Flight with Solely Military Goals,0,0,1/24/85,1985,25-Jan-85
+7,167,2.5M,2.5,2500000,STS-51-D,1,Discovery,4/13/85,Shuttle Lifts Off After Rain Delay: Satellite Is Deployed,0,0,4/12/85,1985,13-Apr-85
+7,168,2.9M,2.9,2900000,STS-51-B,1,Challenger,5/5/85,One Thing NASA Can't Settle: Astronauts' Stomachs,0,0,4/29/85,1985,5-May-85
+7,169,2.5M,2.5,2500000,STS-51-G,1,Discovery,6/17/85,Shuttle Lofts Satellite for Arab Lands and P.L.O.,0,0,6/17/85,1985,17-Jun-85
+7,190,2.9M,2.9,2900000,STS-51-F,1,Challenger,7/30/85,"Challenger Limps Into A Low Orbit As An Engine Fails: 7 Crew Members Are Safe With Other Rockets Operating, Officials Say There Is No Plan to Halt Mission",0,0,7/29/85,1985,30-Jul-85
+5,170,2.5M,2.5,2500000,STS-51-I,1,Discovery,8/28/85,Orbiting Shuttle Successfully Launches 2 Satellites,0,0,8/27/85,1985,28-Aug-85
+5,97,1.7M,1.7,1700000,STS-51-J,1,Atlantis,10/5/85,Shuttle on Secret Mission Deploys 2 Satellites,0,0,10/3/85,1985,5-Oct-85
+8,168,2.5M,2.5,2500000,STS-61-A,1,Challenger,10/29/85,Countdown Begins for Shuttle Flight Carrying 8 on a Scientific Mission: Spacelab is crammed with West German experiments,0,0,10/30/85,1985,29-Oct-85
+7,165,2.5M,2.5,2500000,STS-61-B,1,Atlantis,11/27/85,Night Launching of Shuttle Begins Amid Searing Light,0,0,11/26/85,1985,27-Nov-85
+7,146,2.2M,2.2,2200000,STS-61-C,1,Columbia,1/13/86,Shuttle in Space After 7 Delays; Astronauts Launch RCA Satellite,0,0,1/12/86,1986,13-Jan-86
+7,0,0.0M,0,0,STS-51-L,1,Challenger,1/29/86,"Thousands Watch A Rain of Debris: Shuttle Explodes, Killing All 7 Aboard",1,1,1/28/86,1986,29-Jan-86
+5,97,1.4M,1.4,1400000,STS-26,1,Discovery,9/29/88,"Space Shuttle, After 32 Months, Makes Comeback Attempt Today",0,0,9/29/88,1988,29-Sep-88
+5,105,1.8M,1.8,1800000,STS-27,1,Atlantis,12/3/88,Shuttle With Spy Craft Lifts Off As Winds Ease With Minutes Left,0,0,12/2/88,1988,3-Dec-88
+5,119,1.8M,1.8,1800000,STS-29,1,Discovery,3/14/89,Flight of Shuttle Begins Flawlessly: Spirits at NASA Are Lifted as Craft Overcomes Delays,0,0,3/13/89,1989,14-Mar-89
+5,96,1.5M,1.5,1500000,STS-30,1,Atlantis,5/5/89,"After a Cliffhanger Countdown, Shuttle Launches a Venus Probe",0,0,5/4/89,1989,5-May-89
+5,121,2.1M,2.1,2100000,STS-28,1,Columbia,8/9/89,"Columbia, Nation's First Shuttle, Is Launched on Pentagon Mission",0,0,8/8/89,1989,9-Aug-89
+5,119,1.8M,1.8,1800000,STS-34,1,Atlantis,10/19/89,Shuttle Launched After Delay And Galileo Is Sent to Jupiter,0,0,10/18/89,1989,19-Oct-89
+5,120,2.0M,2,2000000,STS-33,1,Discovery,11/23/89,Shuttle Discovery Blazes Into Night on Secret Mission,0,0,11/22/89,1989,23-Nov-89
+5,261,4.5M,4.5,4500000,STS-32,1,Columbia,1/10/90,Shuttle in Orbit; Satellite Chase Begins,0,0,1/9/90,1990,10-Jan-90
+5,106,1.8M,1.8,1800000,STS-36,1,Atlantis,3/1/90,"After Delays, Shuttle Launched on Secret Mission: Success after five launchings are scrubbed",0,0,2/28/90,1990,1-Mar-90
+5,121,2.1M,2.1,2100000,STS-31,1,Discovery,4/25/90,"Shuttle Soars 381 Miles High, With Telescope and a Dream",0,0,4/24/90,1990,25-Apr-90
+7,218,3.3M,3.3,3300000,STS-40,1,Columbia,6/6/90,"Postponed Twice, Shuttle Lifts Off: 9-Day Flight Includes Study on Jellyfish and Rodents",0,0,10/6/90,1990,6-Jun-90
+5,98,1.7M,1.7,1700000,STS-41,1,Discovery,10/7/90,NASA's Failures End As Discovery Lifts Off,0,0,11/15/90,1990,7-Oct-90
+5,117,2.0M,2,2000000,STS-38,1,Atlantis,11/16/90,Space Shuttle Lifts Off With Secret Military Cargo,0,0,12/2/90,1990,16-Nov-90
+7,215,3.7M,3.7,3700000,STS-35,1,Columbia,12/3/90,"Shuttle Columbia Soars Into Orbit, Months After Fuel Leaks Surfaced",0,0,4/5/91,1991,3-Dec-90
+5,143,2.5M,2.5,2500000,STS-37,1,Atlantis,4/6/91,"Atlantis Is Launched, Carrying 5 to Loft $600 Million Observatory",0,0,4/28/91,1991,6-Apr-91
+7,199,3.5M,3.5,3500000,STS-39,1,Discovery,4/29/91,"Shuttle Is Off at Last, on 8-Day Military Mission Without Secrecy",0,0,6/5/91,1991,29-Apr-91
+5,213,3.7M,3.7,3700000,STS-43,1,Atlantis,8/2/91,Weather Delays Shuttle Liftoff,0,0,8/2/91,1991,2-Aug-91
+5,128,2.2M,2.2,2200000,STS-48,1,Discovery,9/13/91,Shuttle Is Launched on a Mission to Study Pollution's Effects on Atmosphere,0,0,9/12/91,1991,13-Sep-91
+6,166,2.9M,2.9,2900000,STS-44,1,Atlantis,11/25/91,Shuttle Atlantis Is Launched With Military Satellite: The Pentagon saves money by dropping secrecy,0,0,11/24/91,1991,25-Nov-91
+7,193,3.3M,3.3,3300000,STS-42,1,Discovery,1/23/92,Astronauts From 3 Countries Ride Shuttle Into Orbit,0,0,1/22/92,1992,23-Jan-92
+7,214,3.3M,3.3,3300000,STS-45,1,Atlantis,3/25/92,Shuttle Lifts Off to Study Atmosphere,0,0,3/24/92,1992,25-Mar-92
+7,213,4.0M,4,4000000,STS-49,1,Endeavour,5/7/92,New Shuttle Is Set for First Mission: The Nation's Fleet of Space Shuttles is Back to Full Strength,0,0,5/7/92,1992,7-May-92
+7,331,5.8M,5.8,5800000,STS-50,1,Columbia,6/27/92,Shuttle Crew Ignites Foam to Study Fire in Space: Safety is the Astronauts' first concern,0,0,6/25/92,1992,27-Jun-92
+7,191,3.3M,3.3,3300000,STS-46,1,Atlantis,8/1/92,Space Shuttle Thunders Into Orbit To Fly a Satellite on a Thin Wire,0,0,7/31/92,1992,1-Aug-92
+7,190,3.3M,3.3,3300000,STS-47,1,Endeavour,9/13/92,U.S.-Japan Mission Is a Shuttle First: 50th Flight Is a Cooperative Venture and Marked by Several Innovations,0,0,9/12/92,1992,13-Sep-92
+6,236,4.1M,4.1,4100000,STS-52,1,Columbia,10/23/92,Shuttle Launched on Science Mission: main Goal of 10-Day Flight is to Deploy a Tiny Satellite,0,0,10/22/92,1992,23-Oct-92
+5,175,3.0M,3,3000000,STS-53,1,Discovery,12/2/92,Last Military Mission Of Shuttle Is Set Today,0,0,12/2/92,1992,2-Dec-92
+5,143,2.5M,2.5,2500000,STS-54,1,Endeavour,1/13/93,"Endeavour Ready To Start Mission: Space Shuttle to Put Satellite Into Orbit, Run Tests and Broadcast to Schools",0,0,1/13/93,1993,13-Jan-93
+5,222,3.9M,3.9,3900000,STS-56,1,Discovery,4/5/93,Shuttle Readied for Ozone Study: Preparations Move Smoothly for Launching Tomorrow,0,0,4/8/93,1993,5-Apr-93
+5,335,5.8M,5.8,5800000,STS-62,1,Columbia,4/5/93,"Little Glamour, Lots to Do on This Space Trip: A mission where the research payoffs might take years",0,0,4/26/93,1993,5-Apr-93
+7,239,4.2M,4.2,4200000,STS-55,1,Columbia,4/27/93,U.S.-German Crew Launched Into Orbit: 90 experiments planned on long-delayed flight,0,0,6/21/93,1993,27-Apr-93
+6,239,4.1M,4.1,4100000,STS-57,1,Endeavour,6/22/93,4th Endeavour Flight Pursues European Satellite: Shuttle mission may be extended for extra space walks,0,0,9/12/93,1993,22-Jun-93
+5,236,4.1M,4.1,4100000,STS-51,1,Discovery,9/13/93,"After Delay of Months, Shuttle is Off to Good Start",0,0,10/18/93,1993,13-Sep-93
+7,336,5.8M,5.8,5800000,STS-58,1,Columbia,10/18/93,Columbia Carries Crew of 7 Into Space,0,0,12/2/93,1993,18-Oct-93
+7,259,4.4M,4.4,4400000,STS-61,1,Endeavour,12/2/93,Shuttle Blasts Off on Mission to Correct the Space Telescope's Sight: A very complex orbital repair job gets off to a smooth start.,0,0,2/3/94,1994,2-Dec-93
+6,174,3.4M,3.4,3400000,STS-60,1,Discovery,2/4/94,Shuttle Lifts Off On First Mission With a Russian: Flight Is Hailed as Start of New Era in Space,0,0,3/4/94,1994,4-Feb-94
+6,269,4.7M,4.7,4700000,STS-59,1,Endeavour,4/10/94,Shuttle Embarks on High-Tech Scrutiny of Environment: Radar images may explain history and enhance the future.,0,0,4/9/94,1994,10-Apr-94
+7,353,6.1M,6.1,6100000,STS-65,1,Columbia,7/9/94,Newts and Metal Projects Ride Columbia Into Space,0,0,7/8/94,1994,9-Jul-94
+6,262,4.6M,4.6,4600000,STS-64,1,Discovery,9/10/94,Shuttle Soars Into Orbit to Test Device for Space Rescues,0,0,9/9/94,1994,10-Sep-94
+6,269,4.7M,4.7,4700000,STS-68,1,Endeavour,10/1/94,Shuttle Soars Into Space on Mission to Detect Environmental Changes on Earth,0,0,9/30/94,1994,1-Oct-94
+6,262,4.6M,4.6,4600000,STS-66,1,Atlantis,11/4/94,6 Astronauts Are Launched Into Space: Atmosphere Is Focus OF 11-Day Mission,0,0,11/3/94,1994,4-Nov-94
+6,198,3.0M,3,3000000,STS-63,1,Discovery,2/3/95,Shuttle Blasts Off to Meet Russian Station: A space ballet as rehearsal for an international project,0,0,2/3/95,1995,3-Feb-95
+7,399,6.9M,6.9,6900000,STS-67,1,Endeavour,5/2/95,Shuttle Endeavour Blasts Off on a 15-Day Astronomy Mission,0,0,3/2/95,1995,2-May-95
+7,235,4.1M,4.1,4100000,STS-71,1,Atlantis,6/3/95,Lovesick Woodpeckers Poke Hole in a Shuttle's Schedule,0,0,6/27/95,1995,3-Jun-95
+5,214,3.7M,3.7,3700000,STS-70,1,Discovery,7/14/95,"Shuttle Blasts Off, Leaving Woodpecker Threat Behind: Crew to Replace Satellite Lost on Challenger",0,0,7/13/95,1995,14-Jul-95
+5,260,4.5M,4.5,4500000,STS-69,1,Endeavour,9/8/95,Space Shuttle Takes Off After Month's Delay,0,0,9/7/95,1995,8-Sep-95
+7,381,6.6M,6.6,6600000,STS-73,1,Columbia,10/21/95,Space Shuttle Is Launched On 16-Day Science Mission,0,0,10/20/95,1995,21-Oct-95
+5,196,3.4M,3.4,3400000,STS-74,1,Atlantis,11/13/95,"Dodging Clouds, Space Shuttle Begins Its Chase of Russians",0,0,11/12/95,1995,13-Nov-95
+6,214,3.7M,3.7,3700000,STS-72,1,Endeavour,1/12/96,"Shrugging Off the Cold, Shuttle Sets Off on a Satellite Hunt",0,0,1/11/96,1996,12-Jan-96
+7,377,6.5M,6.5,6500000,STS-75,1,Columbia,2/23/96,The Shuttle Takes Off for a High-Wire Act,0,0,2/22/96,1996,23-Feb-96
+6,221,3.8M,3.8,3800000,STS-76,1,Atlantis,3/23/96,"Shuttle Blasts Off, but Hydraulic Leak May Curtail Flight",0,0,3/22/96,1996,23-Mar-96
+6,240,4.1M,4.1,4100000,STS-77,1,Endeavour,5/20/96,Shuttle Begins 10-Day Technology Flight,0,0,5/19/96,1996,20-May-96
+7,405,7.0M,7,7000000,STS-78,1,Columbia,6/21/96,Shuttle Blasts Off on Mission That Could Be Record Length,0,0,6/20/96,1996,21-Jun-96
+6,243,3.9M,3.9,3900000,STS-79,1,Atlantis,9/19/96,Russia's Mir And Shuttle Are Flawless In Space Link,0,0,9/16/96,1996,19-Sep-96
+5,423,7.0M,7,7000000,STS-80,1,Columbia,11/20/96,Shuttle Blasts Off on Mission With 2 Scientific Satellites,0,0,11/19/96,1996,20-Nov-96
+6,244,3.9M,3.9,3900000,STS-81,1,Atlantis,1/13/97,Atlantis blasts Off in Swift Pursuit of Mir Space Station,0,0,1/12/97,1997,13-Jan-97
+7,239,3.8M,3.8,3800000,STS-82,1,Discovery,2/12/97,Shuttle Starts Space Telescope Mission,0,0,2/11/97,1997,12-Feb-97
+7,95,1.5M,1.5,1500000,STS-83,1,Columbia,4/5/97,Shuttle Lifts Off on Mission to Explore Lack of Gravity: A mission focusing in part on how fire reacts in space,0,0,4/4/97,1997,5-Apr-97
+7,221,3.6M,3.6,3600000,STS-84,1,Atlantis,5/16/97,Shuttle Takes Off to Fortify the Mir Station,0,0,5/15/97,1997,16-May-97
+7,376,6.2M,6.2,6200000,STS-94,1,Columbia,7/2/97,Shuttle Roars Aloft to Complete Mission Interrupted in April,0,0,7/1/97,1997,2-Jul-97
+6,284,4.7M,4.7,4700000,STS-85,1,Discovery,8/9/97,Astronauts Aboard Discovery Test New Japanese Robot Arm,0,0,8/7/97,1997,9-Aug-97
+7,259,4.2M,4.2,4200000,STS-86,1,Atlantis,9/28/97,U.S. Space Shuttle Atlantis Docks Safely With Russian Mir,0,0,9/25/97,1997,28-Sep-97
+6,376,6.5M,6.5,6500000,STS-87,1,Columbia,11/20/97,Shuttle Executes Flip on Its Way Into Orbit,0,0,11/19/97,1997,20-Nov-97
+7,211,3.6M,3.6,3600000,STS-89,1,Endeavour,1/23/98,Shuttle Blasts Off With Last American to Live on the Mir Station,0,0,1/22/98,1998,23-Jan-98
+7,381,6.4M,6.4,6400000,STS-90,1,Columbia,4/18/98,Columbia Soars Into Space With a Menagerie on Board,0,0,4/17/98,1998,18-Apr-98
+7,235,3.8M,3.8,3800000,STS-91,1,Discovery,6/3/98,Shuttle Begins America's Last Mission to Mir: Russians say Mir is ready for guests after a computer repair,0,0,6/2/98,1998,3-Jun-98
+7,213,3.6M,3.6,3600000,STS-95,1,Discovery,10/25/98,"For John Glenn and the Nation, a Trip Back in Time",0,0,10/29/98,1998,25-Oct-98
+6,283,4.7M,4.7,4700000,STS-88,1,Endeavour,12/5/98,Space Station's First Construction Crew Lifts Off Aboard the Shuttle,0,0,12/4/98,1998,5-Dec-98
+7,235,4.1M,4.1,4100000,STS-96,1,Discovery,5/28/99,"Shuttle Bound for Space Station, Supplies in Tow",0,0,5/27/99,1999,28-May-99
+5,118,1.8M,1.8,1800000,STS-93,1,Columbia,7/17/99,Woman Leads Shuttle Crew For History-Making Mission,0,0,7/23/99,1999,17-Jul-99
+7,191,3.3M,3.3,3300000,STS-103,1,Discovery,12/22/99,Gotcha! Space Shuttle Crew Captures Broken Telescope: Astronauts Will Now Try to Fix It in Space,0,0,12/19/99,1999,22-Dec-99
+6,269,4.7M,4.7,4700000,STS-99,1,Endeavour,2/11/00,Safety Issues Looming as Number of Shuttle Flights Increases,0,0,2/11/00,2000,11-Feb-00
+7,285,4.9M,4.9,4900000,STS-100,1,Endeavour,4/20/00,Shuttle Endeavour Heads to Space Station,0,0,5/19/00,2000,20-Apr-00
+7,237,5.1M,5.1,5100000,STS-101,1,Atlantis,5/20/00,Shuttle Lifts Off on Mission to Fix Space Station,0,0,9/8/00,2000,20-May-00
+7,283,4.9M,4.9,4900000,STS-106,1,Atlantis,9/7/00,Launching of Shuttle Will Begin Push to Complete Space Outpost,0,0,10/11/00,2000,7-Sep-00
+7,309,5.3M,5.3,5300000,STS-92,1,Discovery,10/14/00,Astronauts Rendezvous With Space Station,0,0,11/30/00,2000,14-Oct-00
+5,259,4.5M,4.5,4500000,STS-97,1,Endeavour,12/1/00,Shuttle Is Off On 'A Beautiful Night to Fly',0,0,2/7/01,2001,1-Dec-00
+5,309,5.4M,5.4,5400000,STS-98,1,Atlantis,2/8/01,Shuttle Atlantis Heads for Space Station Carrying Laboratory,0,0,3/8/01,2001,8-Feb-01
+7,307,5.4M,5.4,5400000,STS-102,1,Discovery,3/7/01,Shuttle Primed for Crew-Exchange Mission to Station,0,0,4/19/01,2001,7-Mar-01
+5,306,5.3M,5.3,5300000,STS-104,1,Atlantis,7/14/01,"Shuttle, a Little Late, Glides Into Station",0,0,7/12/01,2001,14-Jul-01
+7,285,4.9M,4.9,4900000,STS-105,1,Discovery,8/10/01,"For Many, the Shuttle's Return Brings Back Doubt and Anxiety",0,0,8/10/01,2001,10-Aug-01
+7,283,4.8M,4.8,4800000,STS-108,1,Endeavour,12/6/01,"Under Tight Security, Shuttle Lifts Off After a Week's Delay",0,0,12/5/01,2001,6-Dec-01
+7,262,3.9M,3.9,3900000,STS-109,1,Columbia,3/2/02,"Space Shuttle Launched, but Cooling System Is a Worry",0,0,3/1/02,2002,2-Mar-02
+7,259,4.5M,4.5,4500000,STS-110,1,Atlantis,4/9/02,"With Seconds To Spare, The Shuttle Takes Off",0,0,4/8/02,2002,9-Apr-02
+7,332,5.8M,5.8,5800000,STS-111,1,Endeavour,6/6/02,"Delayed for Days, Shuttle Liftoff Sends Crew of 7 to Space Station",0,0,6/5/02,2002,6-Jun-02
+6,259,4.5M,4.5,4500000,STS-112,1,Atlantis,10/1/02,"Grounded No Longer, Shuttle Atlantis Is Readied for Space",0,0,10/7/02,2002,1-Oct-02
+7,330,5.7M,5.7,5700000,STS-113,1,Endeavour,11/24/02,Repaired Endeavour Takes Off With New Crew for Space Station,0,0,11/23/02,2002,24-Nov-02
+7,382,6.6M,6.6,6600000,STS-107,1,Columbia,2/2/03,"Shuttle Breaks Up, 7 Dead: Columbia, With Six Americans and Israeli, Is Lost Over Texas After Starting Descent",1,1,1/16/03,2003,2-Feb-03
+7,333,5.8M,5.8,5800000,STS-114,1,Discovery,8/3/05,"With Shuttle Program, an Intricate and Integral Partnership for NASA",0,0,7/26/05,2005,3-Aug-05
+7,306,5.3M,5.3,5300000,STS-121,1,Discovery,7/18/06,All Smiles as Shuttle Ends A Nearly Perfect Mission,0,0,7/4/06,2006,18-Jul-06
+6,283,4.9M,4.9,4900000,STS-115,1,Atlantis,9/9/06,"Shuttle, Delayed by Faulty Sensor, Will Try Again Today",0,0,9/9/06,2006,9-Sep-06
+7,309,5.3M,5.3,5300000,STS-116,1,Discovery,12/10/06,Discovery Takes Off on a Complex Mission,0,0,12/9/06,2006,10-Dec-06
+7,332,5.8M,5.8,5800000,STS-117,1,Atlantis,6/9/07,Shuttle Atlantis Appears to Have a Flawless Liftoff: Videos will be studied for damage to the foam or other parts,0,0,6/8/07,2007,9-Jun-07
+7,306,5.3M,5.3,5300000,STS-118,1,Endeavour,8/7/07,Teacher-Astronaut to Fly Decades After Challenger,0,0,8/8/07,2007,7-Aug-07
+7,362,6.2M,6.2,6200000,STS-120,1,Discovery,10/23/07,Florida Weather May Delay Shuttle Launching,0,0,10/23/07,2007,23-Oct-07
+7,306,5.3M,5.3,5300000,STS-122,1,Atlantis,2/8/08,Atlantis Heads for the Space Station to Deliver a Science Laboratory From Europe,0,0,2/7/08,2008,8-Feb-08
+7,378,6.6M,6.6,6600000,STS-123,1,Endeavour,3/12/08,Shuttle Is Carrying Laboratory and Robot to Space Station,0,0,3/11/08,2008,12-Mar-08
+7,330,5.7M,5.7,5700000,STS-124,1,Discovery,5/27/08,Shuttle to Take Big Science Lab to Space Station,0,0,5/31/08,2008,27-May-08
+7,380,6.6M,6.6,6600000,STS-126,1,Endeavour,11/15/08,Shuttle Departs With Gear To Remodel Space Station,0,0,11/14/08,2008,15-Nov-08
+7,307,5.3M,5.3,5300000,STS-119,1,Discovery,3/29/09,"After 13 Days, Discovery Ends Mission With Smooth Landing",0,0,3/15/09,2009,29-Mar-09
+7,309,5.3M,5.3,5300000,STS-125,1,Atlantis,5/12/09,Shuttle Atlantis Takes Off For a Last Visit to Hubble,0,0,5/11/09,2009,12-May-09
+7,376,6.5M,6.5,6500000,STS-127,1,Endeavour,7/16/09,Launching of Shuttle Is Marred by Falling Debris,0,0,7/15/09,2009,16-Jul-09
+7,333,5.7M,5.7,5700000,STS-128,1,Discovery,9/12/09,Shuttle Glides to a California Landing,0,0,8/28/09,2009,12-Sep-09
+6,259,4.5M,4.5,4500000,STS-129,1,Atlantis,11/17/09,Shuttle Lifts Off for 11-Day Mission,0,0,11/16/09,2009,17-Nov-09
+6,330,5.7M,5.7,5700000,STS-130,1,Endeavour,2/6/10,"As Shuttle Flights Dwindle, A Series of 'Lasts' Begins",0,0,2/8/10,2010,6-Feb-10
+7,363,6.2M,6.2,6200000,STS-131,1,Discovery,4/5/10,Shuttle Heads for Space Station With Supplies as Missions Dwindle,0,0,4/5/10,2010,5-Apr-10
+4,306,5.3M,5.3,5300000,STS-135,1,Atlantis,5/15/10,Shuttle Atlantis Lifts Off for Its Last Planned Flight,0,0,5/14/10,2010,15-May-10
+6,282,4.9M,4.9,4900000,STS-132,1,Atlantis,5/27/10,"For Atlantis, a Flight Path to Retirement ",0,1,2/24/11,2011,27-May-10
+6,307,5.3M,5.3,5300000,STS-133,1,Discovery,2/25/11,"Discovery, Bound for Space Station, Leaves Earth One Last Time",0,1,5/16/11,2011,25-Feb-11
+6,378,6.5M,6.5,6500000,STS-134,1,Endeavour,5/17/11,Closely Watched Space Shuttle Has Its Last Liftoff,0,1,7/8/11,2011,17-May-11
