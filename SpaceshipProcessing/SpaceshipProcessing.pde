@@ -1,4 +1,6 @@
 PImage backgroundImg;
+PImage nytlogo;
+PFont f;
 // Initializing global variables to keep track of time
 int dayCount;
 int missionCount;
@@ -33,8 +35,10 @@ void setup(){
   size(1440, 900);
   smooth();
   pixelDensity(2);
+  f = createFont("Georgia", 16); //NYTimes font
   // Load background image into variable from memory
   backgroundImg = loadImage("img/SampleBackground2.png");
+  nytlogo = loadImage("img/nyt-logo.png");
   
   // Set frameRate to 60 frames per second
   frameRate(240);
@@ -66,7 +70,8 @@ void setup(){
    int isItFinal = row.getInt("Last Launch?");
    String articleHeader = row.getString("Article Header");
    String articleDate = row.getString("Article Date");
-   Mission mission = new Mission(missionName, shuttleUsed, startDayString, startYear, distanceTraveled, flightTime, doesItCrash, isItFinal, articleHeader, articleDate);
+   String articleDateLong = row.getString("Article Date Long");
+   Mission mission = new Mission(missionName, shuttleUsed, startDayString, startYear, distanceTraveled, flightTime, doesItCrash, isItFinal, articleHeader, articleDateLong);
    allMissions.put(mission.getStartDay(), mission);
    /*println(missionName, " ", mission.getStartDay());*/
   }
@@ -134,9 +139,23 @@ void draw(){
     textSize(15);
     text(dayCount + " days from 04/11/81", width/2, 30);
     text(currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
+   
+   
+    //Create white rect for newspaper area
+    fill(240,240,240,230);     
+    noStroke();
+    rect(50, 600, 1340, 400);
+    image(nytlogo, width/2 - 189, 640);
+   
+   
     //Print headline at the bottom of the screen
-    textSize(25);
+    
+    fill(0);
+    textFont(f);
+    textSize(22);
     text(currentMission.articleHeadline, width/2, 750);
+    textSize(18);
+    text(currentMission.articleDateLong, width/2, 780);
     
     currentShuttle.move(missionSpeed);
     missionTime --;
@@ -164,6 +183,7 @@ void draw(){
     
     
   // Draw every already-launched shuttle
+  fill(255,255,255);
   textSize(10);
   for (String name: SHUTTLENAMES){
     Shuttle shuttle_to_draw = allShuttles.get(name);
