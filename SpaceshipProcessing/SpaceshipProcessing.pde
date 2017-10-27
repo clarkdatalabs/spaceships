@@ -44,7 +44,7 @@ void setup(){
   framePaused = 0;
   numOfShuttle = 0;
   //distCoef = ?;
-  timeCoef = 2;//which means a 60-hour mission takes 2 second, 120-hour mission takes 4 seconds
+  timeCoef = 1;//which means a 60-hour mission takes <timeCoef> second, 120-hour mission takes 2*<timeCoef> seconds
   // Iterate through SHUTTLENAMES to to populate allShuttles HashMap with Shuttle objects
   for (String s: SHUTTLENAMES) {
     allShuttles.put(s, new Shuttle(s));
@@ -81,7 +81,7 @@ void draw(){
   //When there was no mission
   if(missionMode == 0){
     // Every other frame (30 frames/second at 60 fps framerate) a day passes, so: frame/day = 2/1
-    if ((frameCount - framePaused) % 2 == 1){
+    if ((frameCount - framePaused) % 1 == 0){
       dayCount = dayCount + 1;
       textSize(20);
       text(dayCount + " days from 04/11/81", width/2, 30);
@@ -108,8 +108,7 @@ void draw(){
         //get shuttle accordingly
         currentShuttle = allShuttles.get(currentMission.shuttleUsed);
         //if this shuttle hasn't been used before, then tell it has been used so it will show up
-        currentShuttle.start(numOfShuttle);
-        numOfShuttle ++;
+        numOfShuttle = currentShuttle.start(numOfShuttle);
         
         //set its state to "boosting", so that it will show accordingly
         currentShuttle.setState(1);
@@ -131,7 +130,7 @@ void draw(){
     //Print headline at the bottom of the screen
     textSize(25);
     text(currentMission.articleHeadline, width/2, 700);
-    currentShuttle.cumulativeDist += missionSpeed;
+    currentShuttle.move(missionSpeed);
     missionTime --;
       
     //When no time left, mode back to no mission  
