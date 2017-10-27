@@ -30,21 +30,22 @@ float timeCoef;//unit is frameCount/hour
 
 
 void setup(){
-  size(1440, 800);
+  size(1440, 900);
   smooth();
+  pixelDensity(2);
   // Load background image into variable from memory
-  backgroundImg = loadImage("img/SampleBackground.jpg");
+  backgroundImg = loadImage("img/SampleBackground2.png");
   
   // Set frameRate to 60 frames per second
-  frameRate(60);
+  frameRate(240);
   // Set monthCount at 0
   dayCount = 0;  
   missionMode = 0;
   missionCount = 0;
   framePaused = 0;
   numOfShuttle = 0;
-  //distCoef = ?;
-  timeCoef = 1;//which means a 60-hour mission takes <timeCoef> second, 120-hour mission takes 2*<timeCoef> seconds
+  distCoef = 9.6;  //4.8 px/millionMile
+  timeCoef = 1;    //a 60-hour mission takes <timeCoef> second, 120-hour mission takes 2*<timeCoef> seconds
   // Iterate through SHUTTLENAMES to to populate allShuttles HashMap with Shuttle objects
   for (String s: SHUTTLENAMES) {
     allShuttles.put(s, new Shuttle(s));
@@ -80,10 +81,10 @@ void draw(){
   
   //When there was no mission
   if(missionMode == 0){
-    // Every other frame (30 frames/second at 60 fps framerate) a day passes, so: frame/day = 2/1
+    // frame/day = 1/1
     if ((frameCount - framePaused) % 1 == 0){
       dayCount = dayCount + 1;
-      textSize(20);
+      textSize(15);
       text(dayCount + " days from 04/11/81", width/2, 30);
       currentMission = allMissions.get(dayCount);
       
@@ -116,7 +117,13 @@ void draw(){
         //set goal dist,time,velocity in this mission
         missionDist = currentMission.distanceTraveled * distCoef; 
         missionTime = currentMission.flightTime * timeCoef; //get how many frameCount it takes
-        missionSpeed = missionDist/missionTime; //get how many pxs it moves per frameCount
+        if(missionTime != 0){
+          missionSpeed = missionDist/missionTime; //get how many pxs it moves per frameCount
+        }//When missionTime = 0, it is the crashed situation
+        else{
+          missionTime = 120; //for silence tribute
+          missionSpeed = 0;
+        }
       }
     }    
   }
@@ -124,15 +131,15 @@ void draw(){
   //When is in a Mission, missionMode == 1;
   else{
     //know the date and mission name of now
-    textSize(20);
+    textSize(15);
     text(dayCount + " days from 04/11/81", width/2, 30);
     text(currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
     //Print headline at the bottom of the screen
     textSize(25);
-    text(currentMission.articleHeadline, width/2, 700);
+    text(currentMission.articleHeadline, width/2, 750);
+    
     currentShuttle.move(missionSpeed);
     missionTime --;
-      
     //When no time left, mode back to no mission  
     if(missionTime <= 0){
       missionMode = 0;

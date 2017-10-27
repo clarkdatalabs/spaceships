@@ -5,6 +5,7 @@
 //each shuttle should be passed the 4 image states (normal, boost, crashed, decommissioned
 public class Shuttle {
   private String name;
+  private String nameShown;
   private PImage state_normal = loadImage("Shuttle_PNGs/shuttle-white.png");
   private PImage state_boost = loadImage("Shuttle_PNGs/shuttle-white_boost.png");;
   private PImage state_crashed = loadImage("Shuttle_PNGs/shuttle-gray_crashed.png");
@@ -13,8 +14,8 @@ public class Shuttle {
   private int stateNum = 0;
   
   //x should be consistant with earth, y should be where the first shuttle start increase by a step 
-  float[] place = {100,100};//need initiate num
-  float distBetweenShuttle = 100;//need initiate num
+  float[] place = {600,350};//need initiate num
+  float distBetweenShuttle = 75;//need initiate num
   private float cumulativeDist = 0;
   
   
@@ -44,22 +45,22 @@ public class Shuttle {
     cumulativeDist += speed;
   }
   
-  //void initiatePosition(){
-  //}
-  //// In our case, maybe here we have the list of image files
-  //color[] stateColor = {#4ECCEA,#EA4E8F, #C1B7BC};
-  
-
-  
   void appereance(){
     if (hasItStarted == 1){
-      text(name, place[0],place[1]);
+      if(stateNum == 0){
+       nameShown = name; 
+      }
+      else if(stateNum == 1){
+        nameShown = name + " (in a mission)";
+      }
+      else if(stateNum == 3){
+        nameShown = name + " (retired)";
+      }
+      else if(stateNum == 2){
+        nameShown = name + " (crashed)";
+      }
+      text(nameShown, place[0]+ 30 + cumulativeDist,place[1] + 35);
       image(state[stateNum], place[0] + cumulativeDist, place[1], 50, 25);
     }
   }
-  
-  //color colorN(int state){
-  //  return stateColor[state];
-  //}
-
 }
