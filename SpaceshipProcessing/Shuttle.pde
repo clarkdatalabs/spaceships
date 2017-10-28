@@ -14,8 +14,8 @@ public class Shuttle {
   private int stateNum = 0;
   
   //x should be consistant with earth, y should be where the first shuttle start increase by a step 
-  float[] place = {600,350};//need initiate num
-  float distBetweenShuttle = 75;//need initiate num
+  float[] place = {600,300};//need initiate num
+  float distBetweenShuttle = 65;//need initiate num
   private float cumulativeDist = 0;
   
   

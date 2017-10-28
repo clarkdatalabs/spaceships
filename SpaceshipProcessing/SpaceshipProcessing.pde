@@ -1,5 +1,6 @@
 PImage backgroundImg;
 PImage nytlogo;
+PImage paperTexture;
 PFont f;
 // Initializing global variables to keep track of time
 int dayCount;
@@ -37,11 +38,12 @@ void setup(){
   pixelDensity(2);
   f = createFont("Georgia", 16); //NYTimes font
   // Load background image into variable from memory
-  backgroundImg = loadImage("img/SampleBackground2.png");
+  backgroundImg = loadImage("img/SampleBackground3.png");
   nytlogo = loadImage("img/nyt-logo.png");
+  paperTexture = loadImage("img/paper-texture.png");
   
   // Set frameRate to 60 frames per second
-  frameRate(240);
+  frameRate(540);
   // Set monthCount at 0
   dayCount = 0;  
   missionMode = 0;
@@ -144,18 +146,18 @@ void draw(){
     //Create white rect for newspaper area
     fill(240,240,240,230);     
     noStroke();
-    rect(50, 600, 1340, 400);
-    image(nytlogo, width/2 - 189, 640);
-   
+    //rect(0, 650, 1440, 300);
+    image(paperTexture, 0, 650, 1440, 300);
+    image(nytlogo, width/2 - 189, 670);
    
     //Print headline at the bottom of the screen
     
     fill(0);
     textFont(f);
     textSize(22);
-    text(currentMission.articleHeadline, width/2, 750);
+    text(currentMission.articleHeadline, width/2, 780);
     textSize(18);
-    text(currentMission.articleDateLong, width/2, 780);
+    text(currentMission.articleDateLong, width/2, 820);
     
     currentShuttle.move(missionSpeed);
     missionTime --;
