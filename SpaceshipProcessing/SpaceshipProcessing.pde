@@ -31,10 +31,18 @@ float missionSpeed;
 float distCoef;//need a initiatial num in setup(), the unit is px/mile
 float timeCoef;//unit is frameCount/hour
 
+public static float round2(float number, int scale) {
+    int pow = 10;
+    for (int i = 1; i < scale; i++)
+        pow *= 10;
+    float tmp = number * pow;
+    return ( (float) ( (int) ((tmp - (int) tmp) >= 0.5f ? tmp + 1 : tmp) ) ) / pow;
+}
 
 void setup(){
   size(1440, 900);
   smooth();
+  // Note that to run on non-retina display, you need to change pixelDensity to 1 and use a half-res background image
   pixelDensity(2);
   f = createFont("Georgia", 16); //NYTimes font
   // Load background image into variable from memory
@@ -66,7 +74,7 @@ void setup(){
    String shuttleUsed = row.getString("Shuttle");
    String startDayString = row.getString("Mission Date");
    int startYear = row.getInt("Year");
-   int distanceTraveled = row.getInt("Miles Flown #");
+   float distanceTraveled = row.getFloat("Miles Flown #");
    int flightTime = row.getInt("Duration Hours");
    int doesItCrash = row.getInt("Crash?");
    int isItFinal = row.getInt("Last Launch?");
@@ -85,6 +93,12 @@ void setup(){
 void draw(){
   // Draw background image
   background(backgroundImg);
+  // Draw starting line
+  stroke(153);
+  strokeWeight(2);
+  for(int i=0; i < 380; i=i+10){
+    line(600,275+i, 600, 275+i+5);
+  }
   
   //When there was no mission
   if(missionMode == 0){
@@ -120,7 +134,7 @@ void draw(){
         
         //set its state to "boosting", so that it will show accordingly
         currentShuttle.setState(1);
-        
+
         //set goal dist,time,velocity in this mission
         missionDist = currentMission.distanceTraveled * distCoef; 
         missionTime = currentMission.flightTime * timeCoef; //get how many frameCount it takes
@@ -142,7 +156,6 @@ void draw(){
     text(dayCount + " days from 04/11/81", width/2, 30);
     text(currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
    
-   
     //Create white rect for newspaper area
     fill(240,240,240,230);     
     noStroke();
@@ -163,6 +176,9 @@ void draw(){
     missionTime --;
     //When no time left, mode back to no mission  
     if(missionTime <= 0){
+      //adds distance in miles from currentMission to display behind currentShuttle
+      currentShuttle.addToRawDistance(currentMission.distanceTraveled);   
+      println(str(currentMission.distanceTraveled));
       missionMode = 0;
       framePaused = frameCount - framcount_startPause;
       

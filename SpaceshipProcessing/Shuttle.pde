@@ -16,7 +16,9 @@ public class Shuttle {
   //x should be consistant with earth, y should be where the first shuttle start increase by a step 
   float[] place = {600,300};//need initiate num
   float distBetweenShuttle = 65;//need initiate num
-  private float cumulativeDist = 0;
+  private float cumulativeDist = 0; //for animation of shuttle purposes
+  
+  private float cumulativeRawDistance = 0; //for display of total miles traveled
   
   
   //constructor
@@ -35,6 +37,11 @@ public class Shuttle {
      return numOfShuttle;
    }
   }
+  
+  void addToRawDistance(float miles){
+    cumulativeRawDistance += miles;
+  }
+  
   
   //set the current state for shuttles to appear accordingly
   void setState(int _stateNum){
@@ -61,6 +68,11 @@ public class Shuttle {
       }
       text(nameShown, place[0]+ 30 + cumulativeDist,place[1] + 35);
       image(state[stateNum], place[0] + cumulativeDist, place[1], 50, 25);
+      text(str(cumulativeRawDistance) + "m miles", place[0] - 35, place[1] + 18);
+      strokeWeight(3);
+      stroke(200);
+      line(place[0], place[1] + 13, place[0] + cumulativeDist, place[1] + 13);
+      //text(str(round2((cumulativeDist/(distCoef*2)), 2)), place[0] - 30, place[1] + 18);
     }
   }
 }

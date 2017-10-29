@@ -25,7 +25,7 @@ public class Mission {
   // ints where 4/12/81 == day 
   private String startDayString;
   private int startYear;
-  private int distanceTraveled;
+  private float distanceTraveled;
   private int flightTime;
   private int doesItCrash;
   private int isItFinal;
@@ -34,7 +34,7 @@ public class Mission {
   private String articleDateLong;
   
   // constructor
-  public Mission(String name_, String shuttleUsed_, String startDayString_, int startYear_, int distanceTraveled_, int flightTime_, int doesItCrash_, int isItFinal_, String articleHeadline_, String articleDateLong_) {
+  public Mission(String name_, String shuttleUsed_, String startDayString_, int startYear_, float distanceTraveled_, int flightTime_, int doesItCrash_, int isItFinal_, String articleHeadline_, String articleDateLong_) {
     name = name_;
     shuttleUsed = shuttleUsed_;
     startDayString = startDayString_;
