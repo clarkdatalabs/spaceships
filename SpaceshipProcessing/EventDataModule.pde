@@ -7,12 +7,21 @@
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.text.Format;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 // Constants that establish the starting year, month, and day of the space shuttle program (and thus our program!)
 // I set it to a day before the first launch for simplicity's sake :)
-final int SHUTTLESTARTYEAR = 1981;
+final int SHUTTLESTARTYEAR = 81;
 final int SHUTTLESTARTMONTH = 4;
 final int SHUTTLESTARTDAY = 11;
+
+Date displayStartDate = new Date(SHUTTLESTARTYEAR, SHUTTLESTARTMONTH, SHUTTLESTARTDAY);
+Date displayCurrentDate = new Date(SHUTTLESTARTYEAR, SHUTTLESTARTMONTH, SHUTTLESTARTDAY);
+Calendar c = Calendar.getInstance();
+DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
 
 // Mission class will store key information about each Mission
@@ -62,7 +71,7 @@ public class Mission {
     int startMonth = SHUTTLESTARTMONTH;
     int startDay = SHUTTLESTARTDAY;
     
-    int endYear = endYear_;
+    int endYear = endYear_ - 1900;
     int endMonth = endMonth_;
     int endDay = endDay_;
     

@@ -104,8 +104,13 @@ void draw(){
     // frame/day = 1/1
     if ((frameCount - framePaused) % 1 == 0){
       dayCount = dayCount + 1;
+      c.setTime(displayStartDate);
+      c.add(Calendar.DATE, dayCount);
+      displayCurrentDate = c.getTime();
       textSize(15);
-      text(dayCount + " days from 04/11/81", width/2, 30);
+      //text(dayCount + " days from 04/11/81", width/2, 30);
+      String strDate = df.format(displayCurrentDate);
+      text(strDate, width/2, 30);
       currentMission = allMissions.get(dayCount);
       
       // If happen to be a mission this day, then switch mode and get the shuttle accordingly. Otherwise, dayCount goes on
@@ -137,6 +142,10 @@ void draw(){
         //set goal dist,time,velocity in this mission
         missionDist = currentMission.distanceTraveled * distCoef; 
         missionTime = currentMission.flightTime * timeCoef; //get how many frameCount it takes
+        
+        //adds distance in miles from currentMission to display behind currentShuttle
+        currentShuttle.addToRawDistance(currentMission.distanceTraveled);   
+        
         if(missionTime != 0){
           missionSpeed = missionDist/missionTime; //get how many pxs it moves per frameCount
         }//When missionTime = 0, it is the crashed situation
@@ -173,13 +182,11 @@ void draw(){
     
     // Display current mission badge
     image(missionBadges.get(currentMission.name), width - 400, 30);
-
     currentShuttle.move(missionSpeed);
     missionTime --;
     //When no time left, mode back to no mission  
     if(missionTime <= 0){
-      //adds distance in miles from currentMission to display behind currentShuttle
-      currentShuttle.addToRawDistance(currentMission.distanceTraveled);   
+
       println(str(currentMission.distanceTraveled));
       missionMode = 0;
       framePaused = frameCount - framcount_startPause;
