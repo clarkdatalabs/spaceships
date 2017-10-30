@@ -16,6 +16,8 @@ HashMap<String, Shuttle> allShuttles = new HashMap<String,Shuttle>();
 String[] SHUTTLENAMES = {"Columbia", "Challenger", "Discovery", "Atlantis", "Endeavour"};
 // Create a HashMap of Missions in relation with the dayCountInt of startDate
 HashMap<Integer, Mission> allMissions = new HashMap<Integer, Mission>();
+// HashMap of Mission badges
+HashMap<String, PImage> missionBadges = new HashMap<String,PImage>();
 
 //CurrentSituation
   //missionMode of 0 is no mission, 1 is missioning 
@@ -30,14 +32,6 @@ float missionTime;
 float missionSpeed;
 float distCoef;//need a initiatial num in setup(), the unit is px/mile
 float timeCoef;//unit is frameCount/hour
-
-public static float round2(float number, int scale) {
-    int pow = 10;
-    for (int i = 1; i < scale; i++)
-        pow *= 10;
-    float tmp = number * pow;
-    return ( (float) ( (int) ((tmp - (int) tmp) >= 0.5f ? tmp + 1 : tmp) ) ) / pow;
-}
 
 void setup(){
   size(1440, 900);
@@ -85,7 +79,12 @@ void setup(){
    allMissions.put(mission.getStartDay(), mission);
    /*println(missionName, " ", mission.getStartDay());*/
   }
-  
+  // Populate missionBadges HashMap with mission name (String) and badge (Image) key-value pairs
+  for (Mission value : allMissions.values()){
+    PImage badge = loadImage("STS_mission_patches/" + value.name + ".png");
+    badge.resize(0, 200);
+    missionBadges.put(value.name, badge);
+  }
   textAlign(CENTER);
 }
 
@@ -172,6 +171,9 @@ void draw(){
     textSize(18);
     text(currentMission.articleDateLong, width/2, 820);
     
+    // Display current mission badge
+    image(missionBadges.get(currentMission.name), width - 400, 30);
+
     currentShuttle.move(missionSpeed);
     missionTime --;
     //When no time left, mode back to no mission  

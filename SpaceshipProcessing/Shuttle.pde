@@ -58,7 +58,7 @@ public class Shuttle {
        nameShown = name; 
       }
       else if(stateNum == 1){
-        nameShown = name + " (in a mission)";
+        nameShown = name + " (on a mission)";
       }
       else if(stateNum == 3){
         nameShown = name + " (retired)";
@@ -68,11 +68,12 @@ public class Shuttle {
       }
       text(nameShown, place[0]+ 30 + cumulativeDist,place[1] + 35);
       image(state[stateNum], place[0] + cumulativeDist, place[1], 50, 25);
-      text(str(cumulativeRawDistance) + "m miles", place[0] - 35, place[1] + 18);
+      // Displays cumulativeRawDistance to 1/10th place along Y axis
+      text(String.format("%.01f", cumulativeRawDistance) + "m miles", place[0] - 35, place[1] + 18);
+      // Draws bar graph line from Y axis to immediately behind the Shuttle
       strokeWeight(3);
       stroke(200);
-      line(place[0], place[1] + 13, place[0] + cumulativeDist, place[1] + 13);
-      //text(str(round2((cumulativeDist/(distCoef*2)), 2)), place[0] - 30, place[1] + 18);
+      line(place[0]+1, place[1] + 13, place[0] + cumulativeDist + 3, place[1] + 13);
     }
   }
 }
