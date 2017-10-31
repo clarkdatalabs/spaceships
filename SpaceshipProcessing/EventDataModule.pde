@@ -11,10 +11,11 @@ import java.text.Format;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 
 // Constants that establish the starting year, month, and day of the space shuttle program (and thus our program!)
 // I set it to a day before the first launch for simplicity's sake :)
-final int SHUTTLESTARTYEAR = 81;
+final int SHUTTLESTARTYEAR = 1981;
 final int SHUTTLESTARTMONTH = 4;
 final int SHUTTLESTARTDAY = 11;
 
@@ -22,6 +23,7 @@ Date displayStartDate = new Date(SHUTTLESTARTYEAR, SHUTTLESTARTMONTH, SHUTTLESTA
 Date displayCurrentDate = new Date(SHUTTLESTARTYEAR, SHUTTLESTARTMONTH, SHUTTLESTARTDAY);
 Calendar c = Calendar.getInstance();
 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+LocalDate startDateLD = LocalDate.of(SHUTTLESTARTYEAR, SHUTTLESTARTMONTH, SHUTTLESTARTDAY);
 
 
 // Mission class will store key information about each Mission
@@ -71,14 +73,15 @@ public class Mission {
     int startMonth = SHUTTLESTARTMONTH;
     int startDay = SHUTTLESTARTDAY;
     
-    int endYear = endYear_ - 1900;
+    int endYear = endYear_;
     int endMonth = endMonth_;
     int endDay = endDay_;
     
     Date startDate = new Date(startYear, startMonth, startDay);
     Date endDate = new Date(endYear, endMonth, endDay);
     int difInDays = (int) ((endDate.getTime() - startDate.getTime())/(1000*60*60*24));
-    
+    println("Diff in days call");
+    println(difInDays);
     return (difInDays);
   }
   public String getMissionName(){
