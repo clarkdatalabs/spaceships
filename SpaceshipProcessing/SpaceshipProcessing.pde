@@ -42,7 +42,7 @@ void setup(){
   f = createFont("Georgia", 16); //NYTimes font
   // Load background image into variable from memory
   // Change to "_lores.png" version if running on non-Retina display
-  backgroundImg = loadImage("img/SampleBackground3_lores.png");
+  backgroundImg = loadImage("img/SampleBackground3");
   nytlogo = loadImage("img/nyt-logo.png");
   paperTexture = loadImage("img/paper-texture.png");
   
