@@ -14,7 +14,7 @@ public class Shuttle {
   private int stateNum = 0;
   
   //x should be consistant with earth, y should be where the first shuttle start increase by a step 
-  float[] place = {600,300};//need initiate num
+  float[] place = {180,300};//need initiate num
   float distBetweenShuttle = 65;//need initiate num
   private float cumulativeDist = 0; //for animation of shuttle purposes
   
@@ -71,8 +71,9 @@ public class Shuttle {
       // Displays cumulativeRawDistance to 1/10th place along Y axis
       text(String.format("%.01f", cumulativeRawDistance) + "m miles", place[0] - 35, place[1] + 18);
       // Draws bar graph line from Y axis to immediately behind the Shuttle
-      strokeWeight(3);
-      stroke(200);
+      strokeWeight(15);
+      stroke(#767373,180);
+      
       line(place[0]+1, place[1] + 13, place[0] + cumulativeDist + 3, place[1] + 13);
     }
   }

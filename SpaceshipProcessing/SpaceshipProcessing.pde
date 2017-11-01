@@ -47,8 +47,8 @@ void setup(){
   backgroundImg = loadImage("img/SampleBackground3.png");
   backgroundImgAsteroid = loadImage("img/SampleBackground-asteroids.png");
   earth = loadImage("img/earth-small.png");
-  moon = loadImage("img/mars-small.png");
-  mars = loadImage("img/moon-small.png");
+  moon = loadImage("img/moon-small.png");
+  mars = loadImage("img/mars-small.png");
   
   nytlogo = loadImage("img/nyt-logo.png");
   paperTexture = loadImage("img/paper-texture.png");
@@ -101,14 +101,14 @@ void setup(){
 void draw(){
   // Draw background image
   background(backgroundImgAsteroid);
-  image(earth, 250, 250, 35, 35);
-  image(moon, 250, 350);
-  image(mars, 250, 870);
+  image(earth, 126, 132, 117, 117);
+  image(moon, 276, 82, 31, 31);
+  image(mars, 607, 152, 71, 71);
   // Draw starting line
   stroke(153);
   strokeWeight(2);
   for(int i=0; i < 380; i=i+10){
-    line(600,275+i, 600, 275+i+5);
+    line(180,275+i, 180, 275+i+5);
   }
   
   //When there was no mission
