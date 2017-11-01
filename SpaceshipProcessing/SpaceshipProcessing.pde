@@ -117,6 +117,7 @@ void draw(){
     if ((frameCount - framePaused) % 1 == 0){
       dayCount = dayCount + 1;
       c.setTime(displayStartDate);
+      print(displayStartDate);
       c.add(Calendar.DATE, dayCount);
       displayCurrentDate = c.getTime();
       textSize(15);
@@ -171,13 +172,13 @@ void draw(){
   
   //When is in a Mission, missionMode == 1;
   else{
-    //know the date and mission name of now
+    //know the date and mission name of no;
     textSize(15);
     text(dayCount + " days from 04/11/81", width/2, 30);
     text(currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
    
     //Create white rect for newspaper area
-    fill(240,240,240,230);     
+    //fill(240,240,240,230);     
     noStroke();
     //rect(0, 650, 1440, 300);
     image(paperTexture, 0, 650, 1440, 300);

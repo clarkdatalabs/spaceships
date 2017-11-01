@@ -71,10 +71,12 @@ public class Shuttle {
       // Displays cumulativeRawDistance to 1/10th place along Y axis
       text(String.format("%.01f", cumulativeRawDistance) + "m miles", place[0] - 35, place[1] + 18);
       // Draws bar graph line from Y axis to immediately behind the Shuttle
-      strokeWeight(15);
-      stroke(#767373,180);
-      
-      line(place[0]+1, place[1] + 13, place[0] + cumulativeDist + 3, place[1] + 13);
+      //strokeWeight(15);
+      //stroke(#767373,180);     
+      //line(place[0]+1, place[1] + 13, place[0] + cumulativeDist + 3, place[1] + 13);
+      fill(#767373,180);
+      float thickness = 14;
+      rect(place[0] + 1, place[1] + 13 - thickness/2, cumulativeDist + 2, thickness); 
     }
   }
 }

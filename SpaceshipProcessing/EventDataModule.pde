@@ -19,7 +19,7 @@ final int SHUTTLESTARTYEAR = 1981;
 final int SHUTTLESTARTMONTH = 4;
 final int SHUTTLESTARTDAY = 11;
 
-Date displayStartDate = new Date(SHUTTLESTARTYEAR, SHUTTLESTARTMONTH, SHUTTLESTARTDAY);
+Date displayStartDate = new Date(SHUTTLESTARTYEAR-1900, SHUTTLESTARTMONTH-1, SHUTTLESTARTDAY);
 Date displayCurrentDate = new Date(SHUTTLESTARTYEAR, SHUTTLESTARTMONTH, SHUTTLESTARTDAY);
 Calendar c = Calendar.getInstance();
 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -80,8 +80,8 @@ public class Mission {
     Date startDate = new Date(startYear, startMonth, startDay);
     Date endDate = new Date(endYear, endMonth, endDay);
     int difInDays = (int) ((endDate.getTime() - startDate.getTime())/(1000*60*60*24));
-    println("Diff in days call");
-    println(difInDays);
+    //println("Diff in days call");
+    //println(difInDays);
     return (difInDays);
   }
   public String getMissionName(){
