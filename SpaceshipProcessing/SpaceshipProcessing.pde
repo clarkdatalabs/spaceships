@@ -1,4 +1,8 @@
 PImage backgroundImg;
+PImage backgroundImgAsteroid;
+PImage earth;
+PImage moon;
+PImage mars;
 PImage nytlogo;
 PImage paperTexture;
 PFont f;
@@ -8,7 +12,6 @@ int missionCount;
 String missionCountStr;
 int framePaused;
 int framcount_startPause;
-String strDate;
 
 //Initializaing table viable to store CSV file
 Table missionTableData;
@@ -41,8 +44,12 @@ void setup(){
   pixelDensity(2);
   f = createFont("Georgia", 16); //NYTimes font
   // Load background image into variable from memory
-  // Change to "_lores.png" version if running on non-Retina display
-  backgroundImg = loadImage("img/SampleBackground3");
+  backgroundImg = loadImage("img/SampleBackground3.png");
+  backgroundImgAsteroid = loadImage("img/SampleBackground-asteroids.png");
+  earth = loadImage("img/earth-small.png");
+  moon = loadImage("img/mars-small.png");
+  mars = loadImage("img/moon-small.png");
+  
   nytlogo = loadImage("img/nyt-logo.png");
   paperTexture = loadImage("img/paper-texture.png");
   
@@ -93,7 +100,10 @@ void setup(){
 
 void draw(){
   // Draw background image
-  background(backgroundImg);
+  background(backgroundImgAsteroid);
+  image(earth, 250, 250, 35, 35);
+  image(moon, 250, 350);
+  image(mars, 250, 870);
   // Draw starting line
   stroke(153);
   strokeWeight(2);
@@ -106,16 +116,17 @@ void draw(){
     // frame/day = 1/1
     if ((frameCount - framePaused) % 1 == 0){
       dayCount = dayCount + 1;
-      textSize(28);
-      LocalDate outDate = startDateLD.plusDays(dayCount);
-      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd yyyy");
-      strDate = outDate.format(formatter);
-      text(strDate, width/2, 60);
+      c.setTime(displayStartDate);
+      c.add(Calendar.DATE, dayCount);
+      displayCurrentDate = c.getTime();
+      textSize(15);
+      //text(dayCount + " days from 04/11/81", width/2, 30);
+      String strDate = df.format(displayCurrentDate);
+      text(strDate, width/2, 30);
       currentMission = allMissions.get(dayCount);
       
       // If happen to be a mission this day, then switch mode and get the shuttle accordingly. Otherwise, dayCount goes on
-      if (currentMission != null) {
-        println(dayCount);
+      if (currentMission != null) {        
         missionMode = 1;
         framcount_startPause = frameCount;
         
@@ -130,7 +141,9 @@ void draw(){
         }else{
           missionCountStr = Integer.toString(missionCount) + "th";
         }
-
+        text( currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
+        
+        //get shuttle accordingly
         currentShuttle = allShuttles.get(currentMission.shuttleUsed);
         //if this shuttle hasn't been used before, then tell it has been used so it will show up
         numOfShuttle = currentShuttle.start(numOfShuttle);
@@ -158,10 +171,11 @@ void draw(){
   
   //When is in a Mission, missionMode == 1;
   else{
-    textSize(28);        
-    text(strDate, width/2, 60);
-    textSize(16);        
-    text(currentMission.name + ": the " + missionCountStr + " NASA Shuttle mission ", width/2, 90);    
+    //know the date and mission name of now
+    textSize(15);
+    text(dayCount + " days from 04/11/81", width/2, 30);
+    text(currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
+   
     //Create white rect for newspaper area
     fill(240,240,240,230);     
     noStroke();
