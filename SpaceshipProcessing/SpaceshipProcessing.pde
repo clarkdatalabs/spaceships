@@ -12,6 +12,7 @@ int missionCount;
 String missionCountStr;
 int framePaused;
 int framcount_startPause;
+String strDate;
 
 //Initializaing table viable to store CSV file
 Table missionTableData;
@@ -116,14 +117,11 @@ void draw(){
     // frame/day = 1/1
     if ((frameCount - framePaused) % 1 == 0){
       dayCount = dayCount + 1;
-      c.setTime(displayStartDate);
-      print(displayStartDate);
-      c.add(Calendar.DATE, dayCount);
-      displayCurrentDate = c.getTime();
-      textSize(15);
-      //text(dayCount + " days from 04/11/81", width/2, 30);
-      String strDate = df.format(displayCurrentDate);
-      text(strDate, width/2, 30);
+      textSize(28);
+      LocalDate outDate = startDateLD.plusDays(dayCount);
+      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd yyyy");
+      strDate = outDate.format(formatter);
+      text(strDate, width/2, 60);
       currentMission = allMissions.get(dayCount);
       
       // If happen to be a mission this day, then switch mode and get the shuttle accordingly. Otherwise, dayCount goes on
@@ -142,7 +140,7 @@ void draw(){
         }else{
           missionCountStr = Integer.toString(missionCount) + "th";
         }
-        text( currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
+        //text( currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
         
         //get shuttle accordingly
         currentShuttle = allShuttles.get(currentMission.shuttleUsed);
@@ -172,13 +170,12 @@ void draw(){
   
   //When is in a Mission, missionMode == 1;
   else{
-    //know the date and mission name of no;
-    textSize(15);
-    text(dayCount + " days from 04/11/81", width/2, 30);
-    text(currentMission.startDayString + " is the " + missionCountStr + " launch mission: " + currentMission.name, width/2, 60);
-   
+    textSize(28);        
+    text(strDate, width/2, 60);
+    textSize(16);        
+    text(currentMission.name + ": the " + missionCountStr + " NASA Shuttle mission ", width/2, 90);    
     //Create white rect for newspaper area
-    //fill(240,240,240,230);     
+    fill(240,240,240,230);     
     noStroke();
     //rect(0, 650, 1440, 300);
     image(paperTexture, 0, 650, 1440, 300);
