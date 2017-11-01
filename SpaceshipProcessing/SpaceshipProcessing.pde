@@ -63,7 +63,7 @@ void setup(){
   framePaused = 0;
   numOfShuttle = 0;
   distCoef = 9.6;  //4.8 px/millionMile
-  timeCoef = 1;    //a 60-hour mission takes <timeCoef> second, 120-hour mission takes 2*<timeCoef> seconds
+  timeCoef = 0.8;    //a 60-hour mission takes <timeCoef> second, 120-hour mission takes 2*<timeCoef> seconds
   // Iterate through SHUTTLENAMES to to populate allShuttles HashMap with Shuttle objects
   for (String s: SHUTTLENAMES) {
     allShuttles.put(s, new Shuttle(s));
@@ -111,13 +111,20 @@ void draw(){
   for(int i=0; i < 380; i=i+10){
     line(180,275+i, 180, 275+i+5);
   }
+    //Create white rect for newspaper area
+    //fill(240,240,240,230);     
+    noStroke();
+    //rect(0, 650, 1440, 300);
+    image(paperTexture, 0, 650, 1440, 300);
+    //image(nytlogo, width/2 - 189, 670);
   
   //When there was no mission
   if(missionMode == 0){
     // frame/day = 1/1
     if ((frameCount - framePaused) % 1 == 0){
       dayCount = dayCount + 1;
-      textSize(28);
+      fill(255);
+      textSize(20);
       LocalDate outDate = startDateLD.plusDays(dayCount);
       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd yyyy");
       strDate = outDate.format(formatter);
@@ -170,16 +177,20 @@ void draw(){
   
   //When is in a Mission, missionMode == 1;
   else{
+    fill(255);
     textSize(28);        
     text(strDate, width/2, 60);
     textSize(16);        
-    text(currentMission.name + ": the " + missionCountStr + " NASA Shuttle mission ", width/2, 90);    
+    text(currentMission.name + ": the " + missionCountStr + " NASA Shuttle mission ", width/2, 90);  
+    /*
     //Create white rect for newspaper area
-    fill(240,240,240,230);     
+    //fill(240,240,240,230);     
     noStroke();
     //rect(0, 650, 1440, 300);
     image(paperTexture, 0, 650, 1440, 300);
+    */
     image(nytlogo, width/2 - 189, 670);
+    
    
     //Print headline at the bottom of the screen
     

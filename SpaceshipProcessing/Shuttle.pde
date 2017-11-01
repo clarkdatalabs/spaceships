@@ -65,11 +65,12 @@ public class Shuttle {
       }
       else if(stateNum == 2){
         nameShown = name + " (crashed)";
-      }
+      }      
+      fill(255);
       text(nameShown, place[0]+ 30 + cumulativeDist,place[1] + 35);
       image(state[stateNum], place[0] + cumulativeDist, place[1], 50, 25);
       // Displays cumulativeRawDistance to 1/10th place along Y axis
-      text(String.format("%.01f", cumulativeRawDistance) + "m miles", place[0] - 35, place[1] + 18);
+      text(String.format("%.01f", cumulativeDist/distCoef) + "m miles", place[0] - 35, place[1] + 18);
       // Draws bar graph line from Y axis to immediately behind the Shuttle
       //strokeWeight(15);
       //stroke(#767373,180);     
