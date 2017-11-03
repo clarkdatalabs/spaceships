@@ -1,6 +1,7 @@
 PImage backgroundImg;
 PImage backgroundImgAsteroid;
 PImage earth;
+float earthSize = 100;
 PImage moon;
 PImage mars;
 PImage nytlogo;
@@ -13,6 +14,9 @@ String missionCountStr;
 int framePaused;
 int framcount_startPause;
 String strDate;
+
+int uncommissionedNum;
+int earlierUncommissionedNum;
 
 //Initializaing table viable to store CSV file
 Table missionTableData;
@@ -55,15 +59,16 @@ void setup(){
   paperTexture = loadImage("img/paper-texture.png");
   
   // Set frameRate to 60 frames per second
-  frameRate(540);
+  frameRate(1080);
   // Set monthCount at 0
   dayCount = 0;  
   missionMode = 0;
   missionCount = 0;
   framePaused = 0;
   numOfShuttle = 0;
-  distCoef = 9.6;  //4.8 px/millionMile
+  distCoef = 8;  //8 px/millionMile on 1440 width window
   timeCoef = 0.8;    //a 60-hour mission takes <timeCoef> second, 120-hour mission takes 2*<timeCoef> seconds
+  earlierUncommissionedNum = 0;
   // Iterate through SHUTTLENAMES to to populate allShuttles HashMap with Shuttle objects
   for (String s: SHUTTLENAMES) {
     allShuttles.put(s, new Shuttle(s));
@@ -102,9 +107,9 @@ void setup(){
 void draw(){
   // Draw background image
   background(backgroundImgAsteroid);
-  image(earth, 126, 132, 117, 117);
-  image(moon, 276, 82, 31, 31);
-  image(mars, 607, 152, 71, 71);
+  image(earth, 126, 132, earthSize, earthSize);
+  image(moon, 276, 82, earthSize * 31/117, earthSize * 31/117);
+  image(mars, 468, 152, earthSize * 71/117, earthSize * 71/117);
   // Draw starting line
   stroke(153);
   strokeWeight(2);
@@ -197,9 +202,9 @@ void draw(){
     fill(0);
     textFont(f);
     textSize(22);
-    text(currentMission.articleHeadline, width/2, 780);
+    text(currentMission.articleHeadline, width/2, 780, width * 1/2);
     textSize(18);
-    text(currentMission.articleDateLong, width/2, 820);
+    text(currentMission.articleDateLong, width/2, 820, width * 5/6);
     
     // Display current mission badge
     image(missionBadges.get(currentMission.name), width - 400, 30);
@@ -208,7 +213,7 @@ void draw(){
     //When no time left, mode back to no mission  
     if(missionTime <= 0){
 
-      println(str(currentMission.distanceTraveled));
+      //println(str(currentMission.distanceTraveled));
       missionMode = 0;
       framePaused = frameCount - framcount_startPause;
       
@@ -233,11 +238,24 @@ void draw(){
   // Draw every already-launched shuttle
   fill(255,255,255);
   textSize(10);
+  int uncommissionedNum = 0;
   for (String name: SHUTTLENAMES){
     Shuttle shuttle_to_draw = allShuttles.get(name);
+    if(shuttle_to_draw.getState() == 2 || shuttle_to_draw.getState() == 3 ){
+      uncommissionedNum ++;
+    }      
     //has its shape displayed (x,y,w,h needed to be replaced)
     shuttle_to_draw.appereance();
     }
+    
+    if(uncommissionedNum != earlierUncommissionedNum){
+    println(uncommissionedNum);
+    earlierUncommissionedNum = uncommissionedNum;
+    }
+    if(uncommissionedNum == 5){
+     noLoop(); 
+    }
+  
   }
   
   
